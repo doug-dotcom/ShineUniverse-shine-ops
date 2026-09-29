@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-09-29T19:57:00+10:00",
+  "verified_at": "2026-09-29T20:28:00+10:00",
   "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
   "apps": [
     {
@@ -122,9 +122,9 @@
           "shine-ski-production.up.railway.app"
         ],
         "active_deployment": {
-          "id": "3928cccd-d4c7-437c-9bcf-70f8b19acb16",
+          "id": "4a0bce83-b7bd-45d3-9b66-8543c461b0ef",
           "status": "SUCCESS",
-          "commit_sha": "b97f740f520689f13bfce72a90175dd6bfe88c39"
+          "commit_sha": "093da9c48cca029bedaaae6ec600c1e7545c4d8d"
         }
       },
       "runtime_provenance_headers": true,
