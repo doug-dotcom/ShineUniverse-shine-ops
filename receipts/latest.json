@@ -1,43 +1,43 @@
 {
   "schema_version": 1,
-  "request_id": "universe-go-0002",
+  "request_id": "universe-go-0003",
   "mode": "chat-control",
   "scope": "core",
   "pass": 1,
   "status": "success",
   "dispatch_commits": {
-    "L + Me": "c79231f42185da940c27ca01c28b82b8b6874797",
-    "Shine AI": "6696264327832a32fb1bb8f5db9a8b171a0962f0",
-    "Foundation + Concierge + Defence": "db960504883958d3767ffa20bf0c1885b438d19e"
+    "L + Me": "4342274b7fc8236de3b640cd494959966eff0165",
+    "Shine AI": "a57ea63783285185a1113597507e292ba1c34ccc",
+    "Foundation + Concierge + Defence": "50cc3d5d728d5a6ccfcd909e6c893d83eb8d419b"
   },
   "required_runs": [
     {
       "surface": "L + Me",
       "repository": "doug-dotcom/Project-L-Modular",
-      "run_id": 36539445498,
+      "run_id": 36540437855,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/Project-L-Modular/actions/runs/36539445498"
+      "url": "https://github.com/doug-dotcom/Project-L-Modular/actions/runs/36540437855"
     },
     {
       "surface": "Shine AI",
       "repository": "doug-dotcom/Shine-Ai",
-      "run_id": 36539456778,
+      "run_id": 36540441923,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/Shine-Ai/actions/runs/36539456778"
+      "url": "https://github.com/doug-dotcom/Shine-Ai/actions/runs/36540441923"
     },
     {
       "surface": "Foundation + Concierge",
       "repository": "doug-dotcom/ShineUniverse-shine-core",
-      "run_id": 36539501869,
+      "run_id": 36540447734,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36539501869"
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36540447734"
     },
     {
       "surface": "Defence",
       "repository": "doug-dotcom/ShineUniverse-shine-core",
-      "run_id": 36539502042,
+      "run_id": 36540447877,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36539502042"
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36540447877"
     }
   ]
 }
