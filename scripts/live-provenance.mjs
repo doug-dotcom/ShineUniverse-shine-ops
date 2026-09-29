@@ -114,11 +114,73 @@ async function observeApp(app, { fetchImpl = fetch, timeoutMs = 15000 } = {}) {
   }
 }
 
+export function evaluateDevicePack(pack, observation) {
+  if (!pack) {
+    return {
+      status: "not-applicable",
+      reasons: []
+    };
+  }
+
+  if (!observation?.reachable || observation.http_status < 200 || observation.http_status >= 300) {
+    return {
+      status: "blocked-runtime",
+      reasons: ["production-health-unavailable"]
+    };
+  }
+
+  const headers = observation.headers || {};
+  const required = [
+    HEADER_MAP.repository,
+    HEADER_MAP.commit,
+    HEADER_MAP.branch,
+    HEADER_MAP.deployment,
+    HEADER_MAP.service,
+    HEADER_MAP.environment
+  ];
+  if (required.some((name) => !headers[name])) {
+    return {
+      status: "blocked-runtime",
+      reasons: ["production-provenance-unavailable"]
+    };
+  }
+
+  const sourceMismatch =
+    headers[HEADER_MAP.repository] !== pack.repository ||
+    headers[HEADER_MAP.branch] !== pack.branch ||
+    headers[HEADER_MAP.environment] !== "production";
+
+  if (sourceMismatch) {
+    return {
+      status: "blocked-runtime",
+      reasons: ["production-source-mismatch"]
+    };
+  }
+
+  const reasons = [];
+  if (headers[HEADER_MAP.commit] !== pack.commit_sha) reasons.push("commit-changed");
+  if (headers[HEADER_MAP.deployment] !== pack.production_deployment_id) reasons.push("deployment-changed");
+
+  if (reasons.length) {
+    return {
+      status: "stale-release",
+      reasons
+    };
+  }
+
+  return {
+    status: pack.status === "untested" ? "ready-for-human-test" : pack.status,
+    reasons: []
+  };
+}
+
 export async function buildReport(registry, options = {}) {
   const observed = await Promise.all(registry.apps.map((app) => observeApp(app, options)));
+  const devicePacks = options.devicePacks?.packs || [];
 
   const results = observed.map((observation) => {
     const app = registry.apps.find((item) => item.id === observation.app);
+    const pack = devicePacks.find((item) => item.app_id === observation.app);
     return {
       ...observation,
       expected: {
@@ -128,7 +190,8 @@ export async function buildReport(registry, options = {}) {
         deployment_id: app.railway.active_deployment.id,
         commit_sha: app.railway.active_deployment.commit_sha
       },
-      evaluation: evaluateObservation(app, observation)
+      evaluation: evaluateObservation(app, observation),
+      device_pack: evaluateDevicePack(pack, observation)
     };
   });
 
@@ -137,21 +200,34 @@ export async function buildReport(registry, options = {}) {
     return acc;
   }, {});
 
+  const devicePackCounts = results.reduce((acc, item) => {
+    if (item.device_pack.status !== "not-applicable") {
+      acc[item.device_pack.status] = (acc[item.device_pack.status] || 0) + 1;
+    }
+    return acc;
+  }, {});
+
   return {
-    schema_version: 1,
+    schema_version: 2,
     checked_at: new Date().toISOString(),
     registry_verified_at: registry.verified_at,
+    device_packs_generated_at: options.devicePacks?.generated_at || null,
     total: results.length,
     counts,
     severe_count: results.filter((item) => item.evaluation.severe).length,
     snapshot_drift_count: results.filter((item) => item.evaluation.status === "snapshot-drift").length,
+    device_pack_counts: devicePackCounts,
+    device_pack_ready_count: devicePackCounts["ready-for-human-test"] || 0,
+    device_pack_stale_count: devicePackCounts["stale-release"] || 0,
+    device_pack_blocked_count: devicePackCounts["blocked-runtime"] || 0,
     results
   };
 }
 
 async function main() {
   const registry = JSON.parse(fs.readFileSync(new URL("../config/apps.json", import.meta.url), "utf8"));
-  const report = await buildReport(registry);
+  const devicePacks = JSON.parse(fs.readFileSync(new URL("../config/device-acceptance-packs.json", import.meta.url), "utf8"));
+  const report = await buildReport(registry, { devicePacks });
   process.stdout.write(JSON.stringify(report, null, 2) + "\n");
 
   const strict = process.argv.includes("--strict");
