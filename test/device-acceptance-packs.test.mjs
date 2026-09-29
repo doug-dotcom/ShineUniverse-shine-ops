@@ -7,7 +7,7 @@ const queue=JSON.parse(fs.readFileSync(new URL("../config/device-acceptance-queu
 const packs=JSON.parse(fs.readFileSync(new URL("../config/device-acceptance-packs.json",import.meta.url),"utf8"));
 
 test("device packs bind every queued app to the exact current production release",()=>{
-  assert.equal(packs.schema_version,1);
+  assert.equal(packs.schema_version,2);
   assert.equal(packs.packs.length,queue.entries.length);
   const queueIds=queue.entries.map(e=>e.app);
   assert.deepEqual(packs.packs.map(p=>p.app_id),queueIds);
