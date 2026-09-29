@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "request_id": "universe-go-0025",
+  "request_id": "universe-go-0026",
   "mode": "chat-control",
   "scope": "core",
   "pass": 1,
   "status": "success",
   "dispatch_commits": {
-    "L + Me": "491da17f626994e86861b6e4a764ce2352c26756",
-    "Shine AI": "e3f85563cc8dc6e78b3548dc22836702b7dde69e",
-    "Foundation + Concierge + Defence": "5dcb26f4936e6d0e478dd577eedf6bab5bf2430f"
+    "L + Me": "6605832456275318721772dac9eb24c7ce9bb101",
+    "Shine AI": "d5054a552dc2f61dcfd2d1765b44f3b94eb72821",
+    "Foundation + Concierge + Defence": "143c7378161b21677b1495bfc214b64527dfc1df"
   },
   "required_runs": [
-    {"surface":"L + Me","run_id":36576380289,"conclusion":"success"},
-    {"surface":"Shine AI","run_id":36576390621,"conclusion":"success"},
-    {"surface":"Foundation + Concierge","run_id":36576401086,"conclusion":"success"},
-    {"surface":"Defence","run_id":36576401107,"conclusion":"success"}
+    {"surface":"L + Me","run_id":36576841916,"conclusion":"success"},
+    {"surface":"Shine AI","run_id":36576850733,"conclusion":"success"},
+    {"surface":"Foundation + Concierge","run_id":36576859980,"conclusion":"success"},
+    {"surface":"Defence","run_id":36576860256,"conclusion":"success"}
   ]
 }
