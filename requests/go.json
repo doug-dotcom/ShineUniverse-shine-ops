@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
-  "request_id": "first-live-test-1",
+  "request_id": "dispatcher-bootstrap-live-1",
   "requested_by": "chatgpt-control-room",
   "scope": "core",
   "passes": 1,
-  "note": "First end-to-end Shine Universe dispatcher test."
+  "status": "completed",
+  "receipt": "receipts/dispatcher-bootstrap-live-1.json"
 }
