@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-29T22:24:00+10:00",
+  "source_registry": "config/apps.json",
+  "rule": "Every entry is untested until a human performs the checks on the bound production release. Automated CI, browser simulation and Railway health do not count as physical-device acceptance.",
+  "default_targets": [
+    "real iPhone + Safari",
+    "real iPhone Home Screen/PWA where applicable",
+    "real Android + Chrome before broad public release"
+  ],
+  "entries": [
+    {
+      "order": 1,
+      "app": "shine-translate",
+      "status": "untested",
+      "focus": [
+        "microphone grant/deny/recovery",
+        "pass-phone flow",
+        "offline/flight-mode honesty",
+        "Home Screen lifecycle",
+        "keyboard/focus",
+        "saved phrases"
+      ]
+    },
+    {
+      "order": 2,
+      "app": "shine-dive",
+      "status": "untested",
+      "focus": [
+        "log-a-dive primary journey",
+        "offline/reload behaviour",
+        "saved log persistence",
+        "touch/keyboard",
+        "Home Screen lifecycle"
+      ]
+    },
+    {
+      "order": 3,
+      "app": "shine-travel",
+      "status": "untested",
+      "focus": [
+        "build-a-journey primary flow",
+        "saved-plan persistence",
+        "interrupted network recovery",
+        "touch/keyboard",
+        "Home Screen lifecycle"
+      ]
+    },
+    {
+      "order": 4,
+      "app": "shine-daash",
+      "status": "untested",
+      "focus": [
+        "programme/workout journey",
+        "timer interaction",
+        "attachment/file paths where used",
+        "keyboard/focus",
+        "resume/reopen"
+      ]
+    },
+    {
+      "order": 5,
+      "app": "shine-music",
+      "status": "untested",
+      "focus": [
+        "core creator/listening journey",
+        "saved state",
+        "background/resume",
+        "touch/keyboard",
+        "network interruption"
+      ]
+    },
+    {
+      "order": 6,
+      "app": "shine-fish",
+      "status": "untested",
+      "focus": [
+        "location/search/weather-marine journey",
+        "saved state",
+        "slow/offline behaviour",
+        "touch targets",
+        "resume/reopen"
+      ]
+    },
+    {
+      "order": 7,
+      "app": "shine-ski",
+      "status": "untested",
+      "focus": [
+        "My Day primary journey",
+        "Foundation connect/disconnect UI",
+        "saved state",
+        "offline/network degradation",
+        "browser/Home Screen"
+      ]
+    },
+    {
+      "order": 8,
+      "app": "shine-my-money",
+      "status": "untested",
+      "focus": [
+        "sign-in/session journey",
+        "primary money workflow",
+        "save/reload",
+        "session expiry/recovery",
+        "keyboard/focus"
+      ]
+    },
+    {
+      "order": 9,
+      "app": "punt-49",
+      "status": "untested",
+      "focus": [
+        "race/decision workflow",
+        "save/reload",
+        "session behaviour",
+        "stale/network failure honesty",
+        "touch/keyboard"
+      ]
+    },
+    {
+      "order": 10,
+      "app": "project-rc",
+      "status": "untested",
+      "focus": [
+        "sign-in/session",
+        "daily check-in/journal flow",
+        "save/reload",
+        "failed-write honesty",
+        "touch/keyboard"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "app": "shine-dnd",
+      "reason": "full user-facing D&D app is not live; only a capability service is deployed"
+    },
+    {
+      "app": "project-l",
+      "reason": "registered production coordinate is the companion backend; device acceptance belongs to its separate user surface"
+    },
+    {
+      "app": "shine-ai",
+      "reason": "backend service; physical-device acceptance is not applicable"
+    }
+  ]
+}
