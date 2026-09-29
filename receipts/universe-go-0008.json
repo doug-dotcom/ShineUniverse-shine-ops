@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0008",
+  "mode": "chat-control",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "dispatch_commits": {
+    "L + Me": "29f4306ffdbf9ba17058f0b669e17d50095e8481",
+    "Shine AI": "14ae2a1a68c99d69b2eed9386e6113ed1bd867c7",
+    "Foundation + Concierge + Defence": "9ddc21ab8dc69957b448587896428a469dc08f29"
+  },
+  "required_runs": [
+    {
+      "surface": "L + Me",
+      "repository": "doug-dotcom/Project-L-Modular",
+      "run_id": 36549632755,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/Project-L-Modular/actions/runs/36549632755"
+    },
+    {
+      "surface": "Shine AI",
+      "repository": "doug-dotcom/Shine-Ai",
+      "run_id": 36549647594,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/Shine-Ai/actions/runs/36549647594"
+    },
+    {
+      "surface": "Foundation + Concierge",
+      "repository": "doug-dotcom/ShineUniverse-shine-core",
+      "run_id": 36549658057,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36549658057"
+    },
+    {
+      "surface": "Defence",
+      "repository": "doug-dotcom/ShineUniverse-shine-core",
+      "run_id": 36549657908,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36549657908"
+    }
+  ]
+}
