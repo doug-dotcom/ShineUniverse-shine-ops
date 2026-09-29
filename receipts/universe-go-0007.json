@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0007",
+  "mode": "chat-control-mixed",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "note": "Project L + Me received a fresh universe-go-0007 marker. Shine AI, Foundation + Concierge, and Defence were revalidated by rerunning their current trusted CI workflows after marker writes were unavailable. All required surfaces finished green.",
+  "verification_heads": {
+    "L + Me": "80f4eaeb7e379899065be718e103178da51a84cd",
+    "Shine AI": "c901cc7c2a2dffe470eccd7939646fc908d4b7a2",
+    "Foundation + Concierge + Defence": "8c73b53d18c346486bce65fb0a8e51600d59ec99"
+  },
+  "required_runs": [
+    {
+      "surface": "L + Me",
+      "repository": "doug-dotcom/Project-L-Modular",
+      "run_id": 36548933325,
+      "run_attempt": 1,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/Project-L-Modular/actions/runs/36548933325"
+    },
+    {
+      "surface": "Shine AI",
+      "repository": "doug-dotcom/Shine-Ai",
+      "run_id": 36548496518,
+      "run_attempt": 2,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/Shine-Ai/actions/runs/36548496518"
+    },
+    {
+      "surface": "Foundation + Concierge",
+      "repository": "doug-dotcom/ShineUniverse-shine-core",
+      "run_id": 36548500591,
+      "run_attempt": 2,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548500591"
+    },
+    {
+      "surface": "Defence",
+      "repository": "doug-dotcom/ShineUniverse-shine-core",
+      "run_id": 36548500579,
+      "run_attempt": 2,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548500579"
+    }
+  ]
+}
