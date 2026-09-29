@@ -1,0 +1,1154 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-29T22:35:00+10:00",
+  "rule": "A device result is valid only for the exact production commit and Railway deployment bound into the pack. A new production deployment invalidates an uncompleted or previously completed pack until it is explicitly re-bound and retested.",
+  "status_values": [
+    "untested",
+    "in-progress",
+    "pass",
+    "partial",
+    "fail",
+    "superseded"
+  ],
+  "universal_checks": [
+    "cold launch",
+    "reload and reopen",
+    "primary journey",
+    "save and persistence where applicable",
+    "interrupted operation recovery",
+    "navigate away and return",
+    "narrow phone layout",
+    "touch target usability",
+    "keyboard and focus behaviour",
+    "portrait orientation",
+    "text enlargement",
+    "slow/offline/network recovery where applicable",
+    "background and resume",
+    "process termination and reopen",
+    "permission grant, denial and recovery where applicable",
+    "failed writes must never report fake success"
+  ],
+  "packs": [
+    {
+      "order": 1,
+      "app_id": "shine-translate",
+      "app_name": "Shine Translate",
+      "product_layer": 251,
+      "repository": "doug-dotcom/shine-translate",
+      "branch": "main",
+      "commit_sha": "3c050a704bca072b41ee2677a521c42b3f4e59a4",
+      "production_deployment_id": "287e29d6-bbc8-4272-b4cb-3c6ea0f28000",
+      "production_domain": "shine-translate-production.up.railway.app",
+      "health_path": "/health",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "microphone grant/deny/recovery",
+        "pass-phone flow",
+        "offline/flight-mode honesty",
+        "Home Screen lifecycle",
+        "keyboard/focus",
+        "saved phrases"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 2,
+      "app_id": "shine-dive",
+      "app_name": "Shine Dive",
+      "product_layer": 378,
+      "repository": "doug-dotcom/shine-dive-",
+      "branch": "codex/dive-foundation",
+      "commit_sha": "ee01bddf7bdc034f21c383f6e4e55a7e169718c7",
+      "production_deployment_id": "6aab8cad-ce50-463c-9c12-eaf2b7f49fdb",
+      "production_domain": "shine-dive-production.up.railway.app",
+      "health_path": "/healthz",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "log-a-dive primary journey",
+        "offline/reload behaviour",
+        "saved log persistence",
+        "touch/keyboard",
+        "Home Screen lifecycle"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 3,
+      "app_id": "shine-travel",
+      "app_name": "Shine Travel",
+      "product_layer": 246,
+      "repository": "doug-dotcom/shine-travel",
+      "branch": "main",
+      "commit_sha": "0477ce61a5f7792439987ae51cc5aee2db0ff233",
+      "production_deployment_id": "4f89763d-c9fe-406b-8da6-49f11c173ffe",
+      "production_domain": "shine-travel-sherpa-production.up.railway.app",
+      "health_path": "/health",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "build-a-journey primary flow",
+        "saved-plan persistence",
+        "interrupted network recovery",
+        "touch/keyboard",
+        "Home Screen lifecycle"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 4,
+      "app_id": "shine-daash",
+      "app_name": "Shine DaAsh",
+      "product_layer": 232,
+      "repository": "doug-dotcom/Shine-DaAsh",
+      "branch": "main",
+      "commit_sha": "c13d8ecf558d2d5d78c8d2c8e429f078f8819f95",
+      "production_deployment_id": "f0d00d4a-8169-48ef-b962-d6161eba4822",
+      "production_domain": "shine-daash-x-production.up.railway.app",
+      "health_path": "/api/status",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "programme/workout journey",
+        "timer interaction",
+        "attachment/file paths where used",
+        "keyboard/focus",
+        "resume/reopen"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 5,
+      "app_id": "shine-music",
+      "app_name": "Shine Music / Rivers",
+      "product_layer": 172,
+      "repository": "doug-dotcom/shine-music",
+      "branch": "main",
+      "commit_sha": "51b5ac7c7b69323195c9ec0294f78ffa8b517060",
+      "production_deployment_id": "98e7cfb3-d33d-42e2-9697-9f04ff5ae3de",
+      "production_domain": "shine-music-production.up.railway.app",
+      "health_path": "/health",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "core creator/listening journey",
+        "saved state",
+        "background/resume",
+        "touch/keyboard",
+        "network interruption"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 6,
+      "app_id": "shine-fish",
+      "app_name": "Shine Fish",
+      "product_layer": 170,
+      "repository": "doug-dotcom/shine-fish",
+      "branch": "build/first-app",
+      "commit_sha": "5b57c68ff90ebd685a1d48a2bf0e96d0aa933b3e",
+      "production_deployment_id": "ef5059dd-a663-4b02-ab7e-41061c41e307",
+      "production_domain": "shine-fish-production.up.railway.app",
+      "health_path": "/health",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "location/search/weather-marine journey",
+        "saved state",
+        "slow/offline behaviour",
+        "touch targets",
+        "resume/reopen"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 7,
+      "app_id": "shine-ski",
+      "app_name": "Shine Ski",
+      "product_layer": 34,
+      "repository": "doug-dotcom/Shine-Ski",
+      "branch": "main",
+      "commit_sha": "093da9c48cca029bedaaae6ec600c1e7545c4d8d",
+      "production_deployment_id": "4a0bce83-b7bd-45d3-9b66-8543c461b0ef",
+      "production_domain": "shine-ski-production.up.railway.app",
+      "health_path": "/healthz",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "My Day primary journey",
+        "Foundation connect/disconnect UI",
+        "saved state",
+        "offline/network degradation",
+        "browser/Home Screen"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 8,
+      "app_id": "shine-my-money",
+      "app_name": "Shine My Money",
+      "product_layer": 182,
+      "repository": "doug-dotcom/shine-my-money-",
+      "branch": "main",
+      "commit_sha": "c83159c376a97d9302343f2d1d90f1c0207dffdc",
+      "production_deployment_id": "c634d2b4-1ac1-42ad-a3fb-29d3b4248905",
+      "production_domain": "shine-my-money-production.up.railway.app",
+      "health_path": "/api/health",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "sign-in/session journey",
+        "primary money workflow",
+        "save/reload",
+        "session expiry/recovery",
+        "keyboard/focus"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 9,
+      "app_id": "punt-49",
+      "app_name": "Punt-49",
+      "product_layer": 242,
+      "repository": "doug-dotcom/Punt-49",
+      "branch": "main",
+      "commit_sha": "d370cdd638f6d5f93c55aa1e77ce150bcba9abe2",
+      "production_deployment_id": "e1bbd5a4-68b8-4437-b9ac-e79442df3f06",
+      "production_domain": "punt-49-chat-production.up.railway.app",
+      "health_path": "/health",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "race/decision workflow",
+        "save/reload",
+        "session behaviour",
+        "stale/network failure honesty",
+        "touch/keyboard"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    },
+    {
+      "order": 10,
+      "app_id": "project-rc",
+      "app_name": "Project RC",
+      "product_layer": 160,
+      "repository": "doug-dotcom/Project-RC",
+      "branch": "main",
+      "commit_sha": "224c2e6cd931ae27964eb987fb7d0796ee5a041e",
+      "production_deployment_id": "bd8ee5d2-e2f3-4e3e-835c-6328c3201175",
+      "production_domain": "web-production-2bd5b.up.railway.app",
+      "health_path": "/health",
+      "status": "untested",
+      "tested_at": null,
+      "tester": null,
+      "targets": [
+        "real iPhone + Safari",
+        "real iPhone Home Screen/PWA where applicable",
+        "real Android + Chrome before broad public release"
+      ],
+      "focus": [
+        "sign-in/session",
+        "daily check-in/journal flow",
+        "save/reload",
+        "failed-write honesty",
+        "touch/keyboard"
+      ],
+      "checks": [
+        {
+          "name": "cold launch",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "reload and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save and persistence where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted operation recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "navigate away and return",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "narrow phone layout",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch target usability",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard and focus behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "portrait orientation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "text enlargement",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline/network recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background and resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "process termination and reopen",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "permission grant, denial and recovery where applicable",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed writes must never report fake success",
+          "status": "untested",
+          "notes": []
+        }
+      ],
+      "devices": [],
+      "blockers": [],
+      "notes": []
+    }
+  ]
+}
