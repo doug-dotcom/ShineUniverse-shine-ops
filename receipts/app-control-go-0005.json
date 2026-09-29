@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0005",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T08:15:34Z",
+  "changes": [
+    {
+      "app": "Shine My Money",
+      "type": "ci-control-plane-repair",
+      "pull_request": 79,
+      "merged_commit": "c83159c376a97d9302343f2d1d90f1c0207dffdc",
+      "result": {
+        "my_money_ci": "success",
+        "shine_defence_release_head": "success",
+        "railway_production": "success"
+      }
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "shared-standard",
+      "path": "docs/APP_RELEASE_HEALTH_STANDARD.md",
+      "commit": "2700453cccd5cdccf53f661bbb80bddc28dd1a05"
+    }
+  ],
+  "audited": {
+    "Shine Travel": {
+      "production_branch": "main",
+      "railway": "success"
+    },
+    "Shine Ski": {
+      "production_branch": "main",
+      "production_layer": 34,
+      "railway": "success",
+      "review_layer_279": "non-production-stale-red"
+    },
+    "Shine Music / Rivers": {
+      "production_branch": "main",
+      "product_layer": 172,
+      "ci": "success",
+      "railway": "success"
+    },
+    "Shine DaAsh": {
+      "production_branch": "main",
+      "product_layer": 232,
+      "railway": "success",
+      "general_app_ci": "gap"
+    },
+    "Project RC": {
+      "production_branch": "main",
+      "product_layer": 160,
+      "railway": "success",
+      "current_head_ci": "gap"
+    },
+    "Punt-49": {
+      "production_branch": "main",
+      "product_layer": 242,
+      "ci": "success",
+      "railway": "success"
+    },
+    "Project L / Companion": {
+      "production_branch": "main",
+      "product_layer": 212,
+      "ci": "success",
+      "railway": "success"
+    },
+    "Shine AI": {
+      "production_branch": "main",
+      "product_layer": 170,
+      "ci": "success",
+      "railway": "success"
+    }
+  },
+  "next_queue": [
+    "device acceptance receipts",
+    "DaAsh general app CI",
+    "Project RC current-head CI",
+    "production source registry completion",
+    "runtime provenance convergence",
+    "stale review surface cleanup",
+    "Wellness onboarding"
+  ]
+}
