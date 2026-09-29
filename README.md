@@ -26,9 +26,9 @@ Wave 1 runs Project L/Me, Shine AI and Defence. Wave 2 runs Foundation/Concierge
 
 ## Triggering
 
-The control workflow can be started manually from GitHub Actions or by committing a new `requests/go.json` request. ChatGPT can update that request file from the control room, so the user does not need to visit each project room.
+Primary mode is **Chat Control**: ChatGPT reads the manifest, writes one shared dispatch marker into the three target repositories, waits for the existing CI workflows, and records a consolidated receipt. This requires no cross-repository GitHub secret and means Doug can stay in one room.
 
-Cross-repository workflow dispatch requires a repository secret named `SHINE_UNIVERSE_TOKEN` with Actions write/read access to the target repositories. The workflow fails closed if that credential is absent.
+An optional GitHub Actions autonomous mode remains available through manual `workflow_dispatch`. That mode requires a repository secret named `SHINE_UNIVERSE_TOKEN` with Actions write/read access to the target repositories and fails closed if the credential is absent.
 
 ## Safety
 
