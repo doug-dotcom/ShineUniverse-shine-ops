@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "request_id": "bootstrap",
-  "requested_by": "bootstrap",
+  "request_id": "first-live-test-1",
+  "requested_by": "chatgpt-control-room",
   "scope": "core",
   "passes": 1,
-  "note": "Initial control request. Future Go commands replace this file."
+  "note": "First end-to-end Shine Universe dispatcher test."
 }
