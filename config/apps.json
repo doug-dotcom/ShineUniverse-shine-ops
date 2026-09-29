@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-09-29T22:21:00+10:00",
+  "verified_at": "2026-09-29T22:31:00+10:00",
   "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
   "apps": [
     {
@@ -56,7 +56,7 @@
     {
       "id": "shine-dnd",
       "name": "Shine D&D",
-      "product_layer": 89,
+      "product_layer": 93,
       "product_layer_qualifier": "implemented-and-tested-locally",
       "production_scope": "capability-only",
       "full_app_live": false,
