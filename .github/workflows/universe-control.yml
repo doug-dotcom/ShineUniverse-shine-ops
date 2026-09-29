@@ -1,0 +1,56 @@
+name: Shine Universe Control
+run-name: "Universe Core x${{ inputs.passes || 'request' }} • #${{ github.run_number }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      passes:
+        description: Number of governed formation passes
+        required: true
+        default: "1"
+        type: choice
+        options:
+          - "1"
+          - "2"
+  push:
+    branches: [main]
+    paths:
+      - "requests/go.json"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shine-universe-core-control
+  cancel-in-progress: false
+
+jobs:
+  orchestrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      SHINE_UNIVERSE_TOKEN: ${{ secrets.SHINE_UNIVERSE_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify control-plane configuration
+        run: node scripts/verify-config.mjs
+
+      - name: Run governed formation
+        env:
+          REQUESTED_PASSES: ${{ inputs.passes }}
+        run: node scripts/orchestrate.mjs --passes "$REQUESTED_PASSES"
+
+      - name: Publish formation receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shine-universe-receipt-${{ github.run_id }}
+          path: receipts/universe-receipt.json
+          if-no-files-found: warn
+          retention-days: 30
