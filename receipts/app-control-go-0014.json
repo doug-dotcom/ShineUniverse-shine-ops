@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0014",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T21:59:30+10:00",
+  "changes": [
+    {
+      "app": "Shine DaAsh",
+      "type": "railway-predeploy-release-gate",
+      "production_branch": "main",
+      "commit_sha": "c13d8ecf558d2d5d78c8d2c8e429f078f8819f95",
+      "pre_deploy_command": "pnpm test && pnpm run verify:shine-ai",
+      "deployment_id": "f0d00d4a-8169-48ef-b962-d6161eba4822",
+      "deployment_status": "SUCCESS",
+      "live_provenance": "exact-match"
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "registry-refresh",
+      "commit": "e4ca55064d8a7e0ef9d40d9338264ddebd8d0d1c",
+      "live_provenance_run": 36565102587,
+      "live_provenance": "success",
+      "live_artifact_id": 11031122870
+    }
+  ],
+  "fleet_live_result": {
+    "endpoints": 13,
+    "reachable": 13,
+    "exact_matches": 11,
+    "snapshot_drift": 2,
+    "severe_source_drift": 0,
+    "daash_exact_match": true,
+    "snapshot_drift_apps": [
+      "Project L / Companion",
+      "Shine AI"
+    ]
+  },
+  "next_queue": [
+    "continue release-gate convergence on remaining weak deployment paths",
+    "physical-device acceptance receipts",
+    "explicitly approved non-production retirement",
+    "Wellness onboarding"
+  ]
+}
