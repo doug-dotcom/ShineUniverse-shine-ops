@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-09-29T19:44:30+10:00",
+  "verified_at": "2026-09-29T19:57:00+10:00",
   "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
   "apps": [
     {
@@ -281,9 +281,9 @@
           "punt-49-chat-production.up.railway.app"
         ],
         "active_deployment": {
-          "id": "fcb1a0fa-b208-426a-b10e-1d52e2c82950",
+          "id": "e1bbd5a4-68b8-4437-b9ac-e79442df3f06",
           "status": "SUCCESS",
-          "commit_sha": "19cb276d3c10396202a6eb4e4d943c70410fb2c2"
+          "commit_sha": "d370cdd638f6d5f93c55aa1e77ce150bcba9abe2"
         }
       },
       "runtime_provenance_headers": true,
