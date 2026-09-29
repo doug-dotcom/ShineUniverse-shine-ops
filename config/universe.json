@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scope": "core",
+  "max_passes": 2,
+  "workflows": [
+    {
+      "id": "project-l",
+      "repo": "doug-dotcom/Project-L-Modular",
+      "workflow": "ci.yml",
+      "branch": "main",
+      "wave": 1,
+      "components": [
+        "L",
+        "Me"
+      ]
+    },
+    {
+      "id": "shine-ai",
+      "repo": "doug-dotcom/Shine-Ai",
+      "workflow": "ci.yml",
+      "branch": "main",
+      "wave": 1,
+      "components": [
+        "Shine AI"
+      ]
+    },
+    {
+      "id": "defence",
+      "repo": "doug-dotcom/ShineUniverse-shine-core",
+      "workflow": "shine-defence-core.yml",
+      "branch": "main",
+      "wave": 1,
+      "components": [
+        "Defence"
+      ]
+    },
+    {
+      "id": "foundation",
+      "repo": "doug-dotcom/ShineUniverse-shine-core",
+      "workflow": "shine-foundation.yml",
+      "branch": "main",
+      "wave": 2,
+      "components": [
+        "Foundation",
+        "Concierge"
+      ]
+    }
+  ]
+}
