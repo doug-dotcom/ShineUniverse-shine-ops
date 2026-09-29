@@ -1,0 +1,10 @@
+{
+  "name": "shine-universe-ops",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "verify:config": "node scripts/verify-config.mjs"
+  }
+}
