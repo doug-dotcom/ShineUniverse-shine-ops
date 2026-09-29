@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0017",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T22:47:30+10:00",
+  "changes": [
+    {
+      "surface": "Shine Ops",
+      "type": "release-bound-device-acceptance-packs",
+      "pull_request": 6,
+      "merged_commit": "9327820e4e5303aff29a1d55d409306a1620eed3",
+      "path": "config/device-acceptance-packs.json",
+      "packs": 10,
+      "initial_state": "all-untested",
+      "pr_ci_run": 36570340975,
+      "pr_ci": "success"
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "device-acceptance-runbook",
+      "path": "docs/DEVICE_ACCEPTANCE_RUNBOOK.md",
+      "rule": "real-device results are valid only for the exact bound production commit and Railway deployment"
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "human-wave-tracker",
+      "issue_number": 7,
+      "title": "Physical Device Acceptance Wave 1",
+      "test_order": [
+        "shine-translate",
+        "shine-dive",
+        "shine-travel",
+        "shine-daash",
+        "shine-music",
+        "shine-fish",
+        "shine-ski",
+        "shine-my-money",
+        "punt-49",
+        "project-rc"
+      ]
+    }
+  ],
+  "safety": {
+    "automated_checks_count_as_device_acceptance": false,
+    "prepassed_packs": 0,
+    "stale_release_requires_rebind": true
+  },
+  "next_queue": [
+    "human physical-device acceptance beginning with Shine Translate",
+    "explicitly approved non-production service retirement",
+    "Wellness onboarding when stable"
+  ]
+}
