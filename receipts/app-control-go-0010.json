@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0010",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T19:32:00+10:00",
+  "changes": [
+    {
+      "app": "Shine Music / Rivers",
+      "type": "railway-release-gate-hardening",
+      "railway_project_id": "3dba2137-071a-4fcd-8b8d-b83b1a4615ca",
+      "railway_service_id": "537fb21b-a230-46b5-a7c6-8a437750bd5f",
+      "production_branch": "main",
+      "commit_sha": "51b5ac7c7b69323195c9ec0294f78ffa8b517060",
+      "pre_deploy_command": "pnpm certify:defence && pnpm test:contracts && pnpm check:scanner && pnpm typecheck",
+      "deployment_id": "98e7cfb3-d33d-42e2-9697-9f04ff5ae3de",
+      "deployment_status": "SUCCESS",
+      "live_provenance": "exact-match"
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "registry-refresh",
+      "commit": "0dfb61cac135004b4e3cf5559d5f4198547bcd20",
+      "ops_ci_run": 36549689607,
+      "ops_ci": "success",
+      "live_provenance_run": 36549689927,
+      "live_provenance": "success",
+      "live_artifact_id": 11023444933
+    }
+  ],
+  "fleet_live_result": {
+    "endpoints": 13,
+    "reachable": 13,
+    "exact_matches": 11,
+    "snapshot_drift": 2,
+    "severe_source_drift": 0,
+    "music_exact_match": true
+  },
+  "next_queue": [
+    "continue release-gate convergence on remaining weak deployment paths",
+    "physical-device acceptance receipts",
+    "explicitly approved non-production retirement",
+    "Wellness onboarding"
+  ]
+}
