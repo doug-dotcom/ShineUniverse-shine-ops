@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "app": "Shine Example",
+  "product_layer": null,
+  "repository": "doug-dotcom/example",
+  "branch": "main",
+  "commit_sha": null,
+  "production_deployment_id": null,
+  "tested_at": null,
+  "tester": null,
+  "target_matrix": [
+    "iPhone Safari",
+    "iPhone Home Screen/PWA when applicable",
+    "Android Chrome before broad public release"
+  ],
+  "devices": [],
+  "overall": "untested",
+  "outstanding": [
+    "core journey",
+    "reload/reopen",
+    "persistence",
+    "interrupted operation recovery",
+    "keyboard/focus/touch targets",
+    "network/lifecycle",
+    "permissions/hardware where applicable",
+    "data safety where applicable"
+  ],
+  "notes": []
+}
