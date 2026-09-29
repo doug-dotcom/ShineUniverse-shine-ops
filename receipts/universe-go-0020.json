@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0020",
+  "mode": "chat-control",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "dispatch_commits": {
+    "L + Me": "27e3d6927dd9511655cfa38fb108d4de004d1fde",
+    "Shine AI": "3e0a9e2c4de8854e7f7680e5cc7f3edd014bd149",
+    "Foundation + Concierge + Defence": "f253c132fdeed4af252d8d28ae3a28295e482e03"
+  },
+  "required_runs": [
+    {"surface":"L + Me","run_id":36570163745,"conclusion":"success"},
+    {"surface":"Shine AI","run_id":36570187335,"conclusion":"success"},
+    {"surface":"Foundation + Concierge","run_id":36570203031,"conclusion":"success"},
+    {"surface":"Defence","run_id":36570202991,"conclusion":"success"}
+  ]
+}
