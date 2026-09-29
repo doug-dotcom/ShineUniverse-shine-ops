@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0018",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T23:23:30+10:00",
+  "changes": [
+    {
+      "app": "Shine Wellness",
+      "type": "stable-source-onboarding",
+      "repository": "doug-dotcom/Shine--wellness",
+      "branch": "main",
+      "product_head": "Build 13 — Wellness Trust Engine",
+      "pull_request": 1,
+      "merged_commit": "149a493d1c23ab8e74016c8dfb20146c8a424c52",
+      "ci_run": 36574165855,
+      "ci": "success",
+      "test_files": 14,
+      "tests_passed": 73,
+      "typecheck": "success",
+      "production_build": "success",
+      "fixes_discovered_by_ci": [
+        "explicit pnpm 11 allowBuilds policy for esbuild and unrs-resolver",
+        "correct CareActionStatus type import",
+        "replace unsupported Lucide Tooth icon with supported Smile icon"
+      ]
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "pending-app-onboarding",
+      "pull_request": 8,
+      "merged_commit": "6bb923b94241928cf52849a9250b16df7ab5a54c",
+      "ops_ci_run": 36574656078,
+      "ops_ci": "success",
+      "live_provenance_run": 36574655893,
+      "live_provenance": "success"
+    }
+  ],
+  "production_boundary": {
+    "railway_project_found": false,
+    "railway_deployment": false,
+    "supabase_migrations": "ready-unapplied",
+    "included_in_production_registry": false,
+    "status": "source-onboarded-ci-green-no-production"
+  },
+  "next_queue": [
+    "human physical-device acceptance for existing production apps",
+    "explicitly approved non-production service retirement",
+    "dedicated Wellness persistence/deployment decision when approved"
+  ]
+}
