@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0006-replay-1",
+  "mode": "chat-control",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "replay_of": "universe-go-0006",
+  "concurrency_note": "A canonical universe-go-0006 receipt already existed from another control-room run, so this later green pass is recorded separately and does not overwrite it.",
+  "dispatch_commits": {
+    "L + Me": "452c924f7662d5dbd029b5b0b196311f274b0e81",
+    "Shine AI": "c901cc7c2a2dffe470eccd7939646fc908d4b7a2",
+    "Foundation + Concierge + Defence": "8c73b53d18c346486bce65fb0a8e51600d59ec99"
+  },
+  "required_runs": [
+    {
+      "surface": "L + Me",
+      "repository": "doug-dotcom/Project-L-Modular",
+      "run_id": 36548488445,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/Project-L-Modular/actions/runs/36548488445"
+    },
+    {
+      "surface": "Shine AI",
+      "repository": "doug-dotcom/Shine-Ai",
+      "run_id": 36548496518,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/Shine-Ai/actions/runs/36548496518"
+    },
+    {
+      "surface": "Foundation + Concierge",
+      "repository": "doug-dotcom/ShineUniverse-shine-core",
+      "run_id": 36548500591,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548500591"
+    },
+    {
+      "surface": "Defence",
+      "repository": "doug-dotcom/ShineUniverse-shine-core",
+      "run_id": 36548500579,
+      "conclusion": "success",
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548500579"
+    }
+  ]
+}
