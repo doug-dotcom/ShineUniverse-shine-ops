@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-09-29T22:31:00+10:00",
+  "verified_at": "2026-09-29T23:21:00+10:00",
   "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
   "apps": [
     {
@@ -403,8 +403,30 @@
     {
       "id": "shine-wellness",
       "name": "Shine Wellness",
-      "status": "awaiting-stable-product-head",
-      "note": "Deep build remains in the dedicated Wellness room; add production coordinates only when a stable source/deployment exists."
+      "status": "source-onboarded-ci-green-no-production",
+      "repository": "doug-dotcom/Shine--wellness",
+      "branch": "main",
+      "product_head": "Build 13 — Wellness Trust Engine",
+      "commit_sha": "149a493d1c23ab8e74016c8dfb20146c8a424c52",
+      "ci": {
+        "run_id": 36574165855,
+        "status": "SUCCESS",
+        "test_files": 14,
+        "tests_passed": 73,
+        "typecheck": "SUCCESS",
+        "production_build": "SUCCESS"
+      },
+      "production": {
+        "railway_project": null,
+        "railway_service": null,
+        "deployment_id": null,
+        "status": "not-deployed"
+      },
+      "persistence": {
+        "supabase_migrations": "ready-unapplied",
+        "note": "Migrations remain intentionally unapplied until a dedicated Wellness project is approved."
+      },
+      "note": "Stable source is now under portfolio control with a green product CI gate. No Railway production project was found and no production deployment is claimed."
     }
   ]
 }
