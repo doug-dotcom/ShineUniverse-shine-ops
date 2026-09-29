@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0013",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T20:28:30+10:00",
+  "changes": [
+    {
+      "app": "Shine Ski",
+      "type": "production-image-release-gate",
+      "pull_request": 48,
+      "merged_commit": "23665003418b00f33bfe6c317b0d1889d868b90c",
+      "corrections": [
+        "run verified full application build before legacy image regressions",
+        "install bash and coreutils in Alpine production build stage"
+      ],
+      "verification": {
+        "shine_defence": "success",
+        "intelligence_tests_passed": 906,
+        "legacy_tests_passed": 177,
+        "legacy_tests_failed": 0,
+        "browser_verification": "success",
+        "foundation_canary": "success",
+        "layer_evidence": "success",
+        "container_identity": "success"
+      },
+      "deploy_trigger_commit": "093da9c48cca029bedaaae6ec600c1e7545c4d8d",
+      "railway_deployment_id": "4a0bce83-b7bd-45d3-9b66-8543c461b0ef",
+      "railway": "success"
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "registry-refresh",
+      "commit": "86ed8e6d05b07ac4ca4e074f9f8331abd4173a2e",
+      "ops_ci_run": 36555768290,
+      "ops_ci": "success",
+      "live_provenance_run": 36555768310,
+      "live_provenance": "success",
+      "live_artifact_id": 11027906837
+    }
+  ]
+}
