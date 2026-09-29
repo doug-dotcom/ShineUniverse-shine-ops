@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0009",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T19:22:00+10:00",
+  "changes": [
+    {
+      "surface": "Shine Ops",
+      "type": "live-production-provenance-observer",
+      "pull_request": 4,
+      "merged_commit": "323bbd918443713828b1649efc11c17e03314a4a",
+      "ops_ci": "success",
+      "workflow_run_id": 36548667362,
+      "workflow_conclusion": "success",
+      "artifact_id": 11023004742,
+      "artifact_name": "live-production-provenance"
+    }
+  ],
+  "live_result": {
+    "registered_endpoints": 13,
+    "reachable": 13,
+    "exact_matches": 11,
+    "snapshot_drift": 2,
+    "severe_source_drift": 0,
+    "missing_provenance": 0,
+    "unreachable": 0,
+    "drift_apps": [
+      {
+        "app": "Project L / Companion",
+        "live_commit": "325b8b0effe01f1446f8b55b607803bb8e5685c5",
+        "live_deployment": "5bad8af3-6157-477b-a283-7eb5bddc2efb",
+        "classification": "snapshot-drift",
+        "source_correct": true
+      },
+      {
+        "app": "Shine AI",
+        "live_commit": "c901cc7c2a2dffe470eccd7939646fc908d4b7a2",
+        "live_deployment": "4905de18-c2d2-40c8-ba23-5593b43a883f",
+        "classification": "snapshot-drift",
+        "source_correct": true
+      }
+    ]
+  },
+  "note": "Project L was already building a newer core-dispatch commit during this pass, so the registry snapshot was not rewritten mid-flight. The observer intentionally distinguishes healthy forward movement from wrong-source deployment.",
+  "next_queue": [
+    "physical-device acceptance receipts",
+    "explicitly approved non-production service retirement",
+    "release gate convergence",
+    "Wellness onboarding"
+  ]
+}
