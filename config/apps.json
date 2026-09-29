@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-09-29T23:21:00+10:00",
+  "verified_at": "2026-09-29T23:33:00+10:00",
   "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
   "apps": [
     {
@@ -158,7 +158,7 @@
     {
       "id": "shine-music",
       "name": "Shine Music / Rivers",
-      "product_layer": 172,
+      "product_layer": 173,
       "production_scope": "full-app",
       "repository": "doug-dotcom/shine-music",
       "production_branch": "main",
@@ -172,9 +172,9 @@
           "shine-music-production.up.railway.app"
         ],
         "active_deployment": {
-          "id": "98e7cfb3-d33d-42e2-9697-9f04ff5ae3de",
+          "id": "540b3f18-87a9-4562-b997-467b63b27a30",
           "status": "SUCCESS",
-          "commit_sha": "51b5ac7c7b69323195c9ec0294f78ffa8b517060"
+          "commit_sha": "d1e7a6f228df5b2e26e6a0bdf4d4e99771b3bc42"
         },
         "auxiliary_services": [
           {

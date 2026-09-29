@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T22:35:00+10:00",
+  "generated_at": "2026-09-29T23:33:00+10:00",
   "rule": "A device result is valid only for the exact production commit and Railway deployment bound into the pack. A new production deployment invalidates an uncompleted or previously completed pack until it is explicitly re-bound and retested.",
   "status_values": [
     "untested",
@@ -482,11 +482,11 @@
       "order": 5,
       "app_id": "shine-music",
       "app_name": "Shine Music / Rivers",
-      "product_layer": 172,
+      "product_layer": 173,
       "repository": "doug-dotcom/shine-music",
       "branch": "main",
-      "commit_sha": "51b5ac7c7b69323195c9ec0294f78ffa8b517060",
-      "production_deployment_id": "98e7cfb3-d33d-42e2-9697-9f04ff5ae3de",
+      "commit_sha": "d1e7a6f228df5b2e26e6a0bdf4d4e99771b3bc42",
+      "production_deployment_id": "540b3f18-87a9-4562-b997-467b63b27a30",
       "production_domain": "shine-music-production.up.railway.app",
       "health_path": "/health",
       "status": "untested",
@@ -588,7 +588,9 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [
+        "Re-bound before human testing after live readiness monitor detected the Layer 173 production deployment."
+      ]
     },
     {
       "order": 6,
