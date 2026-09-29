@@ -12,11 +12,6 @@ on:
         options:
           - "1"
           - "2"
-  push:
-    branches: [main]
-    paths:
-      - "requests/go.json"
-
 permissions:
   contents: read
 
