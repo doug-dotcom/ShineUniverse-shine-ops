@@ -1,0 +1,62 @@
+name: Live Production Provenance
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "config/apps.json"
+      - "scripts/live-provenance.mjs"
+      - "test/live-provenance.test.mjs"
+      - ".github/workflows/live-provenance.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-production-provenance
+  cancel-in-progress: true
+
+jobs:
+  observe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out control source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Use Node 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+
+      - name: Observe production provenance
+        run: node scripts/live-provenance.mjs > live-provenance-report.json
+
+      - name: Write run summary
+        if: always()
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const p='live-provenance-report.json';
+          if(!fs.existsSync(p)){
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,'## Live production provenance\n\nNo report was produced.\n');
+            process.exit(0);
+          }
+          const r=JSON.parse(fs.readFileSync(p,'utf8'));
+          const rows=r.results.map(x=>`| ${x.name} | ${x.evaluation.status} | ${x.headers['x-shine-runtime-branch']??'—'} | ${(x.headers['x-shine-runtime-commit']??'—').slice(0,12)} |`).join('\n');
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+            `## Live production provenance\n\nSevere: **${r.severe_count}** · Snapshot drift: **${r.snapshot_drift_count}**\n\n| App | State | Live branch | Live commit |\n|---|---|---|---|\n${rows}\n`
+          );
+          NODE
+
+      - name: Retain provenance report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: live-production-provenance
+          path: live-provenance-report.json
+          if-no-files-found: warn
+          retention-days: 30
