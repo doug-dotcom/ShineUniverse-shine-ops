@@ -1,43 +1,48 @@
 {
   "schema_version": 1,
-  "request_id": "universe-go-0006",
-  "mode": "chat-control",
+  "request_id": "universe-go-0007",
+  "mode": "chat-control-mixed",
   "scope": "core",
   "pass": 1,
   "status": "success",
-  "dispatch_commits": {
-    "L + Me": "325b8b0effe01f1446f8b55b607803bb8e5685c5",
-    "Shine AI": "4c96f5c1caababc55bbc950ba5abdbec3c2944cc",
-    "Foundation + Concierge + Defence": "d7218d1cf0c66149ec1cda0fb37e977f8420895a"
+  "note": "Project L + Me received a fresh universe-go-0007 marker. Shine AI, Foundation + Concierge, and Defence were revalidated by rerunning their current trusted CI workflows after marker writes were unavailable. All required surfaces finished green.",
+  "verification_heads": {
+    "L + Me": "80f4eaeb7e379899065be718e103178da51a84cd",
+    "Shine AI": "c901cc7c2a2dffe470eccd7939646fc908d4b7a2",
+    "Foundation + Concierge + Defence": "8c73b53d18c346486bce65fb0a8e51600d59ec99"
   },
   "required_runs": [
     {
       "surface": "L + Me",
       "repository": "doug-dotcom/Project-L-Modular",
-      "run_id": 36548314208,
+      "run_id": 36548933325,
+      "run_attempt": 1,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/Project-L-Modular/actions/runs/36548314208"
+      "url": "https://github.com/doug-dotcom/Project-L-Modular/actions/runs/36548933325"
     },
     {
       "surface": "Shine AI",
       "repository": "doug-dotcom/Shine-Ai",
-      "run_id": 36548325788,
+      "run_id": 36548496518,
+      "run_attempt": 2,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/Shine-Ai/actions/runs/36548325788"
+      "url": "https://github.com/doug-dotcom/Shine-Ai/actions/runs/36548496518"
     },
     {
       "surface": "Foundation + Concierge",
       "repository": "doug-dotcom/ShineUniverse-shine-core",
-      "run_id": 36548337991,
+      "run_id": 36548500591,
+      "run_attempt": 2,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548337991"
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548500591"
     },
     {
       "surface": "Defence",
       "repository": "doug-dotcom/ShineUniverse-shine-core",
-      "run_id": 36548338164,
+      "run_id": 36548500579,
+      "run_attempt": 2,
       "conclusion": "success",
-      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548338164"
+      "url": "https://github.com/doug-dotcom/ShineUniverse-shine-core/actions/runs/36548500579"
     }
   ]
 }
