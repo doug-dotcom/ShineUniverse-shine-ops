@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0015",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T22:22:00+10:00",
+  "changes": [
+    {
+      "app": "Shine Translate",
+      "type": "railway-full-release-gate",
+      "production_branch": "main",
+      "commit_sha": "3c050a704bca072b41ee2677a521c42b3f4e59a4",
+      "pre_deploy_command": "npm run certify:release",
+      "gate_components": [
+        "Shine Defence",
+        "TypeScript typecheck",
+        "integrated regression checks",
+        "Foundation capability",
+        "production Next build",
+        "production route/privacy/offline certification",
+        "real-world conversation certification"
+      ],
+      "railway_deployment_id": "287e29d6-bbc8-4272-b4cb-3c6ea0f28000",
+      "railway": "success",
+      "live_provenance": "exact-match"
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "registry-refresh",
+      "commit": "bc83a78a76eb80565076bf37a9b5101d44dc20dc",
+      "ops_ci_run": 36567540872,
+      "ops_ci": "success",
+      "live_provenance_run": 36567540861,
+      "live_provenance": "success",
+      "live_artifact_id": 11032546845
+    }
+  ],
+  "fleet_live_result": {
+    "endpoints": 13,
+    "reachable": 13,
+    "exact_matches": 11,
+    "snapshot_drift": 2,
+    "severe_source_drift": 0,
+    "translate_exact_match": true,
+    "snapshot_drift_apps": [
+      "Project L / Companion",
+      "Shine AI"
+    ]
+  },
+  "next_queue": [
+    "continue release-gate convergence on remaining weak deployment paths",
+    "physical-device acceptance receipts",
+    "explicitly approved non-production retirement",
+    "Wellness onboarding"
+  ]
+}
