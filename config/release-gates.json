@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-29T22:24:00+10:00",
+  "rule": "A release gate is converged when the actual production promotion path itself blocks on the app's required product verification, not merely when an independent CI workflow exists.",
+  "entries": [
+    {
+      "app": "shine-travel",
+      "state": "converged",
+      "gate_type": "docker-build",
+      "production_scope": "full-app",
+      "evidence": "Dockerfile runs npm run test:railway before runtime image creation",
+      "coverage": [
+        "Shine Defence",
+        "Railway server build",
+        "Vite production build",
+        "TypeScript",
+        "full Railway regression suite"
+      ]
+    },
+    {
+      "app": "shine-my-money",
+      "state": "converged",
+      "gate_type": "railway-predeploy",
+      "production_scope": "full-app",
+      "evidence": "Railway pre-deploy runs npm run certify:defence && npm test && npm run typecheck; Railpack build must also succeed",
+      "coverage": [
+        "Shine Defence",
+        "product tests",
+        "TypeScript",
+        "production build"
+      ]
+    },
+    {
+      "app": "shine-dnd",
+      "state": "converged-for-capability-only",
+      "gate_type": "railway-predeploy",
+      "production_scope": "capability-only",
+      "evidence": "Railway pre-deploy runs Defence plus the two deployed Foundation capability/context integration suites",
+      "coverage": [
+        "Shine Defence",
+        "deployed capability tests"
+      ],
+      "note": "This does not certify the non-live full D&D product."
+    },
+    {
+      "app": "shine-dive",
+      "state": "converged",
+      "gate_type": "docker-build",
+      "production_scope": "full-app",
+      "evidence": "Docker verified stage runs npm test before runtime image creation",
+      "coverage": [
+        "Shine Defence",
+        "Node regression suite"
+      ]
+    },
+    {
+      "app": "shine-ski",
+      "state": "converged",
+      "gate_type": "docker-build",
+      "production_scope": "full-app",
+      "evidence": "Go 13 hardened Dockerfile.railway and forced a successful production rebuild",
+      "coverage": [
+        "Shine Defence",
+        "verified full app build",
+        "Railway intelligence build",
+        "906 intelligence tests",
+        "177 legacy regressions",
+        "layer evidence"
+      ],
+      "supplementary_ci": [
+        "browser verification",
+        "Foundation production canary",
+        "container identity"
+      ]
+    },
+    {
+      "app": "shine-translate",
+      "state": "converged",
+      "gate_type": "railway-predeploy",
+      "production_scope": "full-app",
+      "evidence": "Go 15 Railway pre-deploy runs npm run certify:release",
+      "coverage": [
+        "Shine Defence",
+        "TypeScript",
+        "integrated release regressions",
+        "Foundation capability",
+        "production build",
+        "route/privacy/offline certification",
+        "real-world conversation certification"
+      ]
+    },
+    {
+      "app": "shine-music",
+      "state": "converged",
+      "gate_type": "railway-predeploy",
+      "production_scope": "full-app",
+      "evidence": "Go 10 Railway pre-deploy blocks on Defence, contracts, scanner syntax and TypeScript; Railpack production build follows",
+      "coverage": [
+        "Shine Defence",
+        "contract suite",
+        "scanner checks",
+        "TypeScript",
+        "production build"
+      ]
+    },
+    {
+      "app": "shine-fish",
+      "state": "converged",
+      "gate_type": "docker-build",
+      "production_scope": "full-app",
+      "evidence": "Docker verified stage runs npm test before runtime image creation",
+      "coverage": [
+        "Shine Defence",
+        "marine certification",
+        "Node regression suite"
+      ]
+    },
+    {
+      "app": "shine-daash",
+      "state": "converged",
+      "gate_type": "railway-predeploy",
+      "production_scope": "full-app",
+      "evidence": "Go 14 Railway pre-deploy runs pnpm test && pnpm run verify:shine-ai",
+      "coverage": [
+        "Shine Defence",
+        "DaAsh regression harness",
+        "Shine AI compatibility",
+        "production build"
+      ]
+    },
+    {
+      "app": "project-rc",
+      "state": "converged",
+      "gate_type": "docker-build",
+      "production_scope": "full-app-backend",
+      "evidence": "Go 11 production Docker image depends on backend-verify stage and frontend verified build",
+      "coverage": [
+        "Shine Defence",
+        "611 backend tests",
+        "frontend test/build gate",
+        "exact production image"
+      ]
+    },
+    {
+      "app": "punt-49",
+      "state": "converged",
+      "gate_type": "docker-build",
+      "production_scope": "full-app-service",
+      "evidence": "Go 12 Docker build runs certify:defence and reference typecheck before Railway Vite bundle",
+      "coverage": [
+        "Shine Defence",
+        "628 regression tests",
+        "reference typecheck",
+        "Railway Vite build",
+        "startup smoke suite retained"
+      ]
+    },
+    {
+      "app": "project-l",
+      "state": "core-managed",
+      "gate_type": "separate-core-formation",
+      "production_scope": "companion-backend",
+      "evidence": "Production pre-deploy has targeted Foundation/trust/runtime checks; full Project L regression CI remains owned by the dedicated core formation",
+      "coverage": [
+        "syntax",
+        "Foundation fleet smoke when present",
+        "Shine AI trace trust",
+        "witness roster rotation"
+      ],
+      "note": "Do not tighten from the app control room while the core formation is actively dispatching this service."
+    },
+    {
+      "app": "shine-ai",
+      "state": "core-managed",
+      "gate_type": "separate-core-formation",
+      "production_scope": "backend-service",
+      "evidence": "Production pre-deploy verifies Project L bridge and Redis coordination; full lint/Defence/pytest/client CI remains owned by the dedicated core formation",
+      "coverage": [
+        "Project L bridge",
+        "Redis coordination"
+      ],
+      "note": "Do not duplicate the core room's release-gate work from the app control room."
+    }
+  ],
+  "summary": {
+    "registered_entries": 13,
+    "app_level_converged": 10,
+    "capability_only_converged": 1,
+    "core_managed": 2,
+    "app_level_open_release_gate_gaps": 0
+  }
+}
