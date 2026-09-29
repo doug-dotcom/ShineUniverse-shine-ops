@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "verify:config": "node scripts/verify-config.mjs"
+    "verify:config": "node scripts/verify-config.mjs",
+    "verify:device-acceptance": "node scripts/validate-device-acceptance.mjs"
   }
 }
