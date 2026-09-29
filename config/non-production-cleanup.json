@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-29T18:50:00+10:00",
+  "destructive_action_performed": false,
+  "rule": "No Railway service is deleted, disabled, redeployed or detached by this manifest. Any destructive cleanup requires explicit human approval after dependency checks.",
+  "candidates": [
+    {
+      "family": "shine-ski",
+      "service_id": "4d60519d-be2c-4873-a9a1-237b1b0cc8c7",
+      "service_name": "shine-ski-review-279-fresh",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "feature/layer-279-native-tabs-20260926",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "e2dcccbd1d0ae9370bcfa80e2f9813ecafe5eeb2",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "No public domain; isolated review service; production Ski is a different Railway project/service on main."
+    },
+    {
+      "family": "shine-ski",
+      "service_id": "fd7e83b3-071d-44e6-b314-dcfb0e6ee224",
+      "service_name": "shine-ski-review-279",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "feature/layer-279-native-tabs-20260926",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "e2dcccbd1d0ae9370bcfa80e2f9813ecafe5eeb2",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Duplicate Layer 279 review surface with no domain; excluded from production health."
+    },
+    {
+      "family": "shine-ski",
+      "service_id": "c55a4cda-6dd1-482f-8f7e-266928590e72",
+      "service_name": "shine-ski-review-278",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "feature/layer-278-native-progress-20260926",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "42093be73909898a189e277deae2a9b390c6cc86",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Historic isolated review service with no domain."
+    },
+    {
+      "family": "shine-ski",
+      "service_id": "0d512bcd-88c6-4ce7-ae26-8b82c6e80c63",
+      "service_name": "shine-ski-review-277",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "feature/layer-277-native-shell-selects-20260926",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "e202748567bb74a9b8bebcbb1003c6c2cfe642c5",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Historic isolated review service with no domain."
+    },
+    {
+      "family": "shine-ski",
+      "service_id": "b13595f1-7dbc-4545-950d-c541e96670ec",
+      "service_name": "shine-ski-review-276",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "feature/layer-276-secondary-tab-demand-split-20260926",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "199eba4bad8acccbc7a11f0afd5e8a2b86e7dcfb",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Historic isolated review service with no domain."
+    },
+    {
+      "family": "shine-ski",
+      "service_id": "d854854b-7013-4ea8-b6df-1fdbc659a8d4",
+      "service_name": "shine-ski-review-275-final",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "main",
+      "domains": [],
+      "latest_status": "SKIPPED",
+      "latest_commit": "06baf9ec3136c655a69341b45207569aeeeafae9",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Review-project duplicate of main with no domain; canonical production service lives in the Shine Ski production project."
+    },
+    {
+      "family": "shine-ski",
+      "service_id": "385f948c-1398-4390-b2ad-c0c9f9b2e36a",
+      "service_name": "shine-ski-review-275-defence-fix",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "fix/layer-275-defence-gpx-boundary-20260926",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "a334adf7cdf553ce05a3dae92230b7c88f2cfd47",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Historic Defence-fix review service with no domain."
+    },
+    {
+      "family": "shine-ski",
+      "service_id": "cc19eb2e-04d7-434a-a92e-24344b44bcc2",
+      "service_name": "shine-ski-review-275-temp",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "feature/layer-275-my-day-demand-split-20260926",
+      "domains": [],
+      "latest_status": "FAILED",
+      "latest_commit": "a1f618daa99569a7a88bf334cb9760fd4a1909a2",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Failed temporary review service with no public domain."
+    },
+    {
+      "family": "shine-translate",
+      "service_id": "785f4126-ca98-4bd7-9a09-07010eba0d86",
+      "service_name": "Shine Translate Validation 4",
+      "project_id": "c30e131d-5336-4a3d-a2ca-e2f6337bb5e5",
+      "source_branch": "validation-fix-004-react-dom-harness",
+      "domains": [],
+      "latest_status": "SLEEPING",
+      "latest_commit": "b8e93764dbb8b1e9380a45fdf6f179589ec0f39e",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Sleeping validation-only service with no domain; production Translate is separate and healthy."
+    },
+    {
+      "family": "shine-translate",
+      "service_id": "5ae807b8-31b8-4c42-9d44-c442e3b04210",
+      "service_name": "Shine Translate Defence Validation",
+      "project_id": "c30e131d-5336-4a3d-a2ca-e2f6337bb5e5",
+      "source_branch": "shine-defence-layer-4",
+      "domains": [],
+      "latest_status": "SLEEPING",
+      "latest_commit": "6ed6e313db57cf9e6ba5b771228c14eacfd7c790",
+      "disposition": "retire-candidate",
+      "explicit_approval_required": true,
+      "reason": "Sleeping Defence-validation service with no domain; current main already carries the verified Defence integration."
+    },
+    {
+      "family": "shine-daash",
+      "service_id": "910a24ce-7720-49c0-8c59-7acf3d04b0e3",
+      "service_name": "shine-daash-buildcheck",
+      "project_id": "b0e8a4e4-f4ae-4bfd-aa0d-2b34fb8211d2",
+      "source_branch": "main",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "c13d8ecf558d2d5d78c8d2c8e429f078f8819f95",
+      "disposition": "retire-candidate-after-confirmation",
+      "explicit_approval_required": true,
+      "reason": "No domains and no service variables. Go 6 added a green GitHub product CI gate, so this duplicate Railway build-check surface appears redundant; confirm no intentional cost/validation role before removal."
+    },
+    {
+      "family": "shine-daash",
+      "service_id": "202dcdd7-f84f-4c41-933d-5acf36007687",
+      "service_name": "shine-daash-layer139-check",
+      "project_id": "b0e8a4e4-f4ae-4bfd-aa0d-2b34fb8211d2",
+      "source_branch": "main",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "c13d8ecf558d2d5d78c8d2c8e429f078f8819f95",
+      "disposition": "retire-candidate-after-confirmation",
+      "explicit_approval_required": true,
+      "reason": "No domains and no service variables; legacy layer-specific check service now auto-deploys current main. Confirm no intentional role before removal."
+    }
+  ],
+  "holds": [
+    {
+      "family": "shine-ski",
+      "service_id": "da0f977d-9ba2-48ef-af06-c15be8bcfcaa",
+      "service_name": "shine-ski-review",
+      "project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "source_branch": "feature/layer-270-snow-state-resort-binding-20260926",
+      "domains": [
+        "shine-ski-review-production.up.railway.app"
+      ],
+      "latest_status": "SUCCESS",
+      "latest_commit": "7111ab94061dead50d77a17e279b50b84554cca7",
+      "disposition": "hold-public-review",
+      "explicit_approval_required": true,
+      "reason": "Still owns a public Railway domain. No code references were found in the connected GitHub estate, but public-link usage cannot be ruled out from source search alone."
+    },
+    {
+      "family": "shine-fish",
+      "service_id": "5d724c00-c294-40be-b535-feb8bc0705df",
+      "service_name": "shine-fish-validation-temp",
+      "project_id": "81486445-2331-46db-b8f1-35e73158853d",
+      "source_branch": "shine-defence-layer-6-clean",
+      "domains": [],
+      "latest_status": "SUCCESS",
+      "latest_commit": "949fb80c60c568b2d993ccf64504f7d776c17327",
+      "disposition": "hold-staged-railway-change",
+      "explicit_approval_required": true,
+      "reason": "No domain and validation-only, but the Fish Railway project currently has a staged resource.update for this service. Reconcile or discard that staged change before any deletion."
+    },
+    {
+      "family": "project-l",
+      "service_id": "79398a12-13cb-4d71-bd3c-05697cbf1e03",
+      "service_name": "Shine-L",
+      "project_id": "2a21be7b-b699-4584-a874-39cd7f3a4755",
+      "source_branch": "main",
+      "domains": [
+        "shine-l-production.up.railway.app"
+      ],
+      "latest_status": "SUCCESS",
+      "latest_commit": "b7d0fd559cbe5280a139329de59d3e6d37545f05",
+      "disposition": "hold-live-reference-migration",
+      "explicit_approval_required": true,
+      "reason": "Legacy service is non-canonical, but the current Project-L-Modular source still contains active configuration references to shine-l-production.up.railway.app. Remove/verify those dependencies before retiring the legacy domain/service."
+    }
+  ],
+  "summary": {
+    "retire_candidates": 12,
+    "holds": 3,
+    "public_domain_holds": 2,
+    "staged_change_holds": 1,
+    "automatic_deletions": 0
+  }
+}
