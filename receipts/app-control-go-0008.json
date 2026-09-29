@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0008",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T19:17:00+10:00",
+  "changes": [
+    {
+      "surface": "Shine Ops",
+      "type": "non-production-cleanup-manifest",
+      "pull_request": 3,
+      "merged_commit": "2d3205298d207a1ad39957a4b24e81cc4d5dc827",
+      "ci": "success",
+      "path": "config/non-production-cleanup.json",
+      "retire_candidates": 12,
+      "holds": 3,
+      "automatic_deletions": 0
+    }
+  ],
+  "holds": [
+    {
+      "service": "Shine-L",
+      "reason": "Current Project-L-Modular source still references shine-l-production.up.railway.app."
+    },
+    {
+      "service": "shine-fish-validation-temp",
+      "reason": "Fish Railway project has a staged resource update for this service."
+    },
+    {
+      "service": "shine-ski-review",
+      "reason": "Service still owns a public Railway domain."
+    }
+  ],
+  "next_queue": [
+    "physical-device acceptance receipts",
+    "explicitly approved non-production service retirement",
+    "release gate convergence",
+    "optional live provenance observation",
+    "Wellness onboarding"
+  ]
+}
