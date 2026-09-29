@@ -1,0 +1,410 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-29T18:50:00+10:00",
+  "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
+  "apps": [
+    {
+      "id": "shine-travel",
+      "name": "Shine Travel",
+      "product_layer": 246,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/shine-travel",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "72648456-7ccf-4c6b-ac73-b63aaf7caffa",
+        "service_id": "d47224cf-e8db-4aea-8de7-d3ccb588cf5b",
+        "service_name": "Shine-Travel-Sherpa",
+        "environment_id": "0bcb521a-69c0-448a-8066-442ba0a01ba1",
+        "health_path": "/health",
+        "domains": [
+          "shine-travel-sherpa-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "4f89763d-c9fe-406b-8da6-49f11c173ffe",
+          "status": "SUCCESS",
+          "commit_sha": "0477ce61a5f7792439987ae51cc5aee2db0ff233"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "outstanding"
+    },
+    {
+      "id": "shine-my-money",
+      "name": "Shine My Money",
+      "product_layer": 182,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/shine-my-money-",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "406a2f6d-4542-470a-a6e8-59980f4b5500",
+        "service_id": "14f11970-0e22-4f18-a4e0-9fb4b84bbf01",
+        "service_name": "shine-my-money",
+        "environment_id": "294a94be-dbf4-4b2e-a6b4-afc5bdc5c304",
+        "health_path": "/api/health",
+        "domains": [
+          "shine-my-money-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "c634d2b4-1ac1-42ad-a3fb-29d3b4248905",
+          "status": "SUCCESS",
+          "commit_sha": "c83159c376a97d9302343f2d1d90f1c0207dffdc"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "unknown"
+    },
+    {
+      "id": "shine-dnd",
+      "name": "Shine D&D",
+      "product_layer": 89,
+      "product_layer_qualifier": "implemented-and-tested-locally",
+      "production_scope": "capability-only",
+      "full_app_live": false,
+      "repository": "doug-dotcom/shine-D-D",
+      "production_branch": "build/layer-001-foundation",
+      "railway": {
+        "project_id": "311a5dad-75cb-462b-b503-f05a4109e8d7",
+        "service_id": "68087e56-6908-4565-81a6-281b2ae6befe",
+        "service_name": "shine-dnd-capability",
+        "environment_id": "8cc14012-7bf7-48fd-a647-747bb70584d4",
+        "health_path": "/health",
+        "domains": [
+          "shine-dnd-capability-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "14e9381e-d5f0-4692-8416-25021e487d3e",
+          "status": "SLEEPING",
+          "commit_sha": "0fcc6c6a08874c67fc9deef82a3b4edb7c675229"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "outstanding"
+    },
+    {
+      "id": "shine-dive",
+      "name": "Shine Dive",
+      "product_layer": 378,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/shine-dive-",
+      "production_branch": "codex/dive-foundation",
+      "railway": {
+        "project_id": "341772f7-a30d-4feb-b4da-2360717c1ca9",
+        "service_id": "f922c795-ee8f-4a4a-92a6-7770ae06cc0a",
+        "service_name": "shine-dive",
+        "environment_id": "600fe8df-cc75-461c-b8bd-049bd28f0fc1",
+        "health_path": "/healthz",
+        "domains": [
+          "shine-dive-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "6aab8cad-ce50-463c-9c12-eaf2b7f49fdb",
+          "status": "SUCCESS",
+          "commit_sha": "ee01bddf7bdc034f21c383f6e4e55a7e169718c7"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "outstanding"
+    },
+    {
+      "id": "shine-ski",
+      "name": "Shine Ski",
+      "product_layer": 34,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/Shine-Ski",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "4514424e-1378-4ea7-b13f-fdacce5195ee",
+        "service_id": "85991136-5c38-443a-a476-848bda7c184e",
+        "service_name": "shine-ski",
+        "environment_id": "146dbf93-17ad-47de-8d12-bda33206c4bb",
+        "health_path": "/healthz",
+        "domains": [
+          "shine-ski-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "3928cccd-d4c7-437c-9bcf-70f8b19acb16",
+          "status": "SUCCESS",
+          "commit_sha": "b97f740f520689f13bfce72a90175dd6bfe88c39"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "unknown"
+    },
+    {
+      "id": "shine-translate",
+      "name": "Shine Translate",
+      "product_layer": 251,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/shine-translate",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "c30e131d-5336-4a3d-a2ca-e2f6337bb5e5",
+        "service_id": "c0e989de-85fb-44d5-b966-a3bdbba60393",
+        "service_name": "Shine Translate",
+        "environment_id": "8ae2870b-7182-4ae0-a13a-2de9309d5e23",
+        "health_path": "/health",
+        "domains": [
+          "shine-translate-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "e5adf660-2ec4-4e6d-a48c-1b34799e029a",
+          "status": "SUCCESS",
+          "commit_sha": "3c050a704bca072b41ee2677a521c42b3f4e59a4"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "outstanding"
+    },
+    {
+      "id": "shine-music",
+      "name": "Shine Music / Rivers",
+      "product_layer": 172,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/shine-music",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "3dba2137-071a-4fcd-8b8d-b83b1a4615ca",
+        "service_id": "537fb21b-a230-46b5-a7c6-8a437750bd5f",
+        "service_name": "Shine Music",
+        "environment_id": "287d1d11-6b96-46c1-8869-1b70a8e30952",
+        "health_path": "/health",
+        "domains": [
+          "shine-music-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "01cea2e5-677e-4a18-bdde-6aa0853ccffc",
+          "status": "SUCCESS",
+          "commit_sha": "51b5ac7c7b69323195c9ec0294f78ffa8b517060"
+        },
+        "auxiliary_services": [
+          {
+            "service_id": "e2326472-e4e2-4c4f-8487-ad1195d9057a",
+            "service_name": "rivers-malware-scanner",
+            "role": "production-auxiliary"
+          }
+        ]
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "unknown"
+    },
+    {
+      "id": "shine-fish",
+      "name": "Shine Fish",
+      "product_layer": 170,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/shine-fish",
+      "production_branch": "build/first-app",
+      "railway": {
+        "project_id": "81486445-2331-46db-b8f1-35e73158853d",
+        "service_id": "2282f233-7e57-4d67-b02a-403968deb390",
+        "service_name": "shine-fish",
+        "environment_id": "207210fb-694b-493a-aa02-cc607d72c5e4",
+        "health_path": "/health",
+        "domains": [
+          "shine-fish-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "ef5059dd-a663-4b02-ab7e-41061c41e307",
+          "status": "SUCCESS",
+          "commit_sha": "5b57c68ff90ebd685a1d48a2bf0e96d0aa933b3e"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "outstanding"
+    },
+    {
+      "id": "shine-daash",
+      "name": "Shine DaAsh",
+      "product_layer": 232,
+      "production_scope": "full-app",
+      "repository": "doug-dotcom/Shine-DaAsh",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "b0e8a4e4-f4ae-4bfd-aa0d-2b34fb8211d2",
+        "service_id": "e39219ad-cd27-47f8-a6c9-687181113240",
+        "service_name": "shine-daash-x",
+        "environment_id": "3f6f6eab-daac-4da7-9a1d-caaa24dccd01",
+        "health_path": "/api/status",
+        "domains": [
+          "shine-daash-x-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "afed3b69-fc4c-4018-b441-f463f66bd106",
+          "status": "SUCCESS",
+          "commit_sha": "c13d8ecf558d2d5d78c8d2c8e429f078f8819f95"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "outstanding"
+    },
+    {
+      "id": "project-rc",
+      "name": "Project RC",
+      "product_layer": 160,
+      "production_scope": "full-app-backend",
+      "repository": "doug-dotcom/Project-RC",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "6b2a1fdf-6908-4b6a-a18a-3f1f50724497",
+        "service_id": "1cd8f81c-6f65-4b71-91cb-de2df70eb41f",
+        "service_name": "web",
+        "environment_id": "822c00e0-0969-4dc2-8c88-2c893c2549b9",
+        "health_path": "/health",
+        "domains": [
+          "web-production-2bd5b.up.railway.app",
+          "web-production-b8fbb3.up.railway.app",
+          "web-production-fc170f.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "13a9de27-4c9c-4e2a-936c-a69668fcf75d",
+          "status": "SUCCESS",
+          "commit_sha": "84552c127bf2a8eca2c2fd3fb5453c0db91a64e2"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "unknown"
+    },
+    {
+      "id": "punt-49",
+      "name": "Punt-49",
+      "product_layer": 242,
+      "production_scope": "full-app-service",
+      "repository": "doug-dotcom/Punt-49",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "72648456-7ccf-4c6b-ac73-b63aaf7caffa",
+        "service_id": "af90b122-ef51-402c-8de3-5239926da9ae",
+        "service_name": "Punt-49-Chat",
+        "environment_id": "0bcb521a-69c0-448a-8066-442ba0a01ba1",
+        "health_path": "/health",
+        "domains": [
+          "punt-49-chat-production.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "fcb1a0fa-b208-426a-b10e-1d52e2c82950",
+          "status": "SUCCESS",
+          "commit_sha": "19cb276d3c10396202a6eb4e4d943c70410fb2c2"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "unknown"
+    },
+    {
+      "id": "project-l",
+      "name": "Project L / Companion",
+      "product_layer": 212,
+      "production_scope": "companion-backend",
+      "repository": "doug-dotcom/Project-L-Modular",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "72648456-7ccf-4c6b-ac73-b63aaf7caffa",
+        "service_id": "0edbbc64-5cb5-46b5-b818-2f938196c2a1",
+        "service_name": "Project-L-Modular",
+        "environment_id": "0bcb521a-69c0-448a-8066-442ba0a01ba1",
+        "health_path": "/health",
+        "domains": [
+          "project-l-modular-production.up.railway.app",
+          "www.shinesystems.com.au"
+        ],
+        "active_deployment": {
+          "id": "d3cc93a0-a0b7-4250-bf4a-b07517fd4c85",
+          "status": "SUCCESS",
+          "commit_sha": "5dfc40b780c021dd6cfc824c7e14f60090339043"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "separate-user-surface"
+    },
+    {
+      "id": "shine-ai",
+      "name": "Shine AI",
+      "product_layer": 170,
+      "production_scope": "backend-service",
+      "repository": "doug-dotcom/Shine-Ai",
+      "production_branch": "main",
+      "railway": {
+        "project_id": "72648456-7ccf-4c6b-ac73-b63aaf7caffa",
+        "service_id": "18cd334c-5e66-4221-915e-f7c2cfdb7ef7",
+        "service_name": "Shine-AI",
+        "environment_id": "0bcb521a-69c0-448a-8066-442ba0a01ba1",
+        "health_path": "/health",
+        "domains": [
+          "shine-ai-production-b6fd.up.railway.app"
+        ],
+        "active_deployment": {
+          "id": "b99085d0-e00c-4950-bb49-b01611bc5ed5",
+          "status": "SUCCESS",
+          "commit_sha": "2426af34a448899ef01e2c102ca22e48f8cf958d"
+        }
+      },
+      "runtime_provenance_headers": true,
+      "device_acceptance": "not-applicable"
+    }
+  ],
+  "non_production_surfaces": [
+    {
+      "family": "shine-ski",
+      "railway_project_id": "a5af6d50-eab4-4a5f-a953-bb86b2046030",
+      "project_name": "Shine Ski Review",
+      "services": [
+        "shine-ski-review-279-fresh",
+        "shine-ski-review-279",
+        "shine-ski-review-278",
+        "shine-ski-review-277",
+        "shine-ski-review-276",
+        "shine-ski-review-275-final",
+        "shine-ski-review-275-defence-fix",
+        "shine-ski-review-275-temp",
+        "shine-ski-review"
+      ],
+      "excluded_from_production_health": true,
+      "note": "Review-only stack. Layer 279 branch is diverged from production main and its observed PR CI/Defence runs were red."
+    },
+    {
+      "family": "shine-translate",
+      "railway_project_id": "c30e131d-5336-4a3d-a2ca-e2f6337bb5e5",
+      "services": [
+        "Shine Translate Validation 4",
+        "Shine Translate Defence Validation"
+      ],
+      "excluded_from_production_health": true,
+      "note": "Validation services; both observed sleeping."
+    },
+    {
+      "family": "shine-fish",
+      "railway_project_id": "81486445-2331-46db-b8f1-35e73158853d",
+      "services": [
+        "shine-fish-validation-temp"
+      ],
+      "excluded_from_production_health": true,
+      "note": "Temporary validation service. A staged Railway patch also remains on this project and must not be confused with the production service."
+    },
+    {
+      "family": "shine-daash",
+      "railway_project_id": "b0e8a4e4-f4ae-4bfd-aa0d-2b34fb8211d2",
+      "services": [
+        "shine-daash-buildcheck",
+        "shine-daash-layer139-check"
+      ],
+      "excluded_from_production_health": true,
+      "note": "Build/validation services; production is shine-daash-x."
+    },
+    {
+      "family": "project-l",
+      "railway_project_id": "2a21be7b-b699-4584-a874-39cd7f3a4755",
+      "services": [
+        "Shine-L"
+      ],
+      "excluded_from_production_health": true,
+      "note": "Legacy service/repository. Canonical Project L is Project-L-Modular."
+    }
+  ],
+  "pending_apps": [
+    {
+      "id": "shine-wellness",
+      "name": "Shine Wellness",
+      "status": "awaiting-stable-product-head",
+      "note": "Deep build remains in the dedicated Wellness room; add production coordinates only when a stable source/deployment exists."
+    }
+  ]
+}

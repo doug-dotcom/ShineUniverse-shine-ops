@@ -33,3 +33,16 @@ An optional GitHub Actions autonomous mode remains available through manual `wor
 ## Safety
 
 The dispatcher does not bypass any project CI. It only invokes the existing trusted workflows and waits for their conclusions. A failed or missing child run stops the formation before the next pass.
+
+
+## App estate registry
+
+The user-facing/product estate is tracked separately from the six-surface core dispatcher.
+
+- `config/apps.json` is the authoritative production-source snapshot for the controlled app fleet.
+- It records the real Railway repository/branch/service, active deployment, health path, product layer, runtime-provenance support and device-acceptance state.
+- Review, validation and legacy Railway services are listed separately and are explicitly excluded from production health.
+- `docs/APP_RELEASE_HEALTH_STANDARD.md` defines how product layer, CI, Defence, shared services, deployment and physical-device acceptance are kept separate.
+- `receipts/device-acceptance-template.json` is the canonical human device-test receipt.
+
+The registry is intentionally evidence-based. A review branch, successful build, simulated browser test or Railway service existing somewhere in the account is never promoted to production status without the matching production-source evidence.
