@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0020",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T23:45:30+10:00",
+  "changes": [
+    {
+      "surface": "Shine Ops",
+      "type": "physical-device-evidence-gate",
+      "pull_request": 11,
+      "merged_commit": "c9d8bc691bf97a1e93179fd76ca11ef789dfd43f",
+      "pack_schema_version": 2,
+      "rules": {
+        "pass_requires_tester": true,
+        "pass_requires_tested_at": true,
+        "pass_requires_real_device": true,
+        "pass_requires_all_universal_checks": true,
+        "pass_requires_all_focus_checks": true,
+        "pass_requires_zero_blockers": true,
+        "partial_requires_supporting_evidence": true,
+        "fail_requires_failed_evidence_or_blocker": true,
+        "superseded_requires_reason": true
+      }
+    }
+  ],
+  "verification": {
+    "pr_ci_run": 36577337163,
+    "pr_ci": "success",
+    "main_ci_run": 36577402309,
+    "main_ci": "success",
+    "live_provenance_run": 36577402351,
+    "live_provenance": "success",
+    "device_pack_ready": 10,
+    "device_pack_stale": 0,
+    "device_pack_blocked": 0,
+    "human_device_passes": 0
+  },
+  "next_queue": [
+    "human physical-device testing beginning with Shine Translate",
+    "explicitly approved non-production service retirement",
+    "dedicated Wellness persistence/deployment decision when approved"
+  ]
+}
