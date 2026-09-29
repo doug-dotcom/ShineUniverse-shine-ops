@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0012",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T19:58:30+10:00",
+  "changes": [
+    {
+      "app": "Punt-49",
+      "type": "production-image-release-gate",
+      "pull_request": 9,
+      "merged_commit": "d370cdd638f6d5f93c55aa1e77ce150bcba9abe2",
+      "docker_gate": {
+        "shine_defence": "success",
+        "regression_tests": 628,
+        "regression_passed": 628,
+        "regression_failed": 0,
+        "reference_typecheck": "success",
+        "vite_railway_build": "success",
+        "exact_production_image_build": "success"
+      },
+      "post_merge": {
+        "punt49_ci_run": 36552308326,
+        "punt49_ci": "success",
+        "shine_defence_run": 36552308337,
+        "shine_defence": "success",
+        "railway_deployment_id": "e1bbd5a4-68b8-4437-b9ac-e79442df3f06",
+        "railway": "success",
+        "live_provenance": "exact-match"
+      }
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "registry-refresh",
+      "commit": "59a4b2c8bed438bcda76ffbc7ccd7d79208b2924",
+      "ops_ci_run": 36552542286,
+      "ops_ci": "success",
+      "live_provenance_run": 36552542383,
+      "live_provenance": "success",
+      "live_artifact_id": 11025507171
+    }
+  ],
+  "fleet_live_result": {
+    "endpoints": 13,
+    "reachable": 13,
+    "exact_matches": 11,
+    "snapshot_drift": 2,
+    "severe_source_drift": 0,
+    "punt49_exact_match": true,
+    "snapshot_drift_apps": [
+      "Project L / Companion",
+      "Shine AI"
+    ]
+  },
+  "next_queue": [
+    "continue release-gate convergence on remaining weak deployment paths",
+    "physical-device acceptance receipts",
+    "explicitly approved non-production retirement",
+    "Wellness onboarding"
+  ]
+}
