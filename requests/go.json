@@ -1,9 +1,8 @@
 {
   "schema_version": 1,
-  "request_id": "universe-go-0004",
+  "request_id": "universe-go-0005",
   "requested_by": "chatgpt-control-room",
   "scope": "core",
   "passes": 1,
-  "status": "completed",
-  "receipt": "receipts/universe-go-0004.json"
+  "status": "dispatched"
 }
