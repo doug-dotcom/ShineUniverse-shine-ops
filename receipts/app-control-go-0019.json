@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0019",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T23:36:30+10:00",
+  "changes": [
+    {
+      "surface": "Shine Ops",
+      "type": "live-device-pack-readiness",
+      "pull_request": 9,
+      "merged_commit": "f5b426814c1653b022e9a303b1602dfaa2b1bb08",
+      "live_run": 36575725991,
+      "first_result": {
+        "ready": 9,
+        "stale": 1,
+        "blocked": 0,
+        "stale_app": "shine-music"
+      }
+    },
+    {
+      "app": "Shine Music / Rivers",
+      "type": "safe-untested-pack-rebind",
+      "pull_request": 10,
+      "merged_commit": "de3f3c5ad346e1a549d884fdd0848cc14d6e8e8e",
+      "previous_product_layer": 172,
+      "current_product_layer": 173,
+      "production_commit": "d1e7a6f228df5b2e26e6a0bdf4d4e99771b3bc42",
+      "production_deployment": "540b3f18-87a9-4562-b997-467b63b27a30",
+      "railway": "success",
+      "rivers_ci_run": 36570052926,
+      "rivers_ci": "success",
+      "defence_run": 36570053158,
+      "defence": "success",
+      "human_device_status": "untested"
+    }
+  ],
+  "final_live_result": {
+    "live_run": 36576273119,
+    "exact_runtime_matches": 11,
+    "snapshot_drift": 2,
+    "severe_runtime_drift": 0,
+    "device_pack_ready": 10,
+    "device_pack_stale": 0,
+    "device_pack_blocked": 0,
+    "remaining_snapshot_drift_apps": [
+      {
+        "app": "Project L / Companion",
+        "live_commit": "d470b413e85908008a39a6494b3bd9c62aa64007",
+        "live_deployment": "2f38b0cd-d3b6-412d-a55f-9533b9c36fb2"
+      },
+      {
+        "app": "Shine AI",
+        "live_commit": "df32d6e92cd9370f89ec1e5557b8a5863efe3cbb",
+        "live_deployment": "790344c5-c1e4-4ad2-bcc8-867907992562"
+      }
+    ]
+  },
+  "safety": {
+    "phone_passes_inferred": 0,
+    "automatic_rebind_allowed_only_when_pack_untested": true
+  },
+  "next_queue": [
+    "human physical-device testing beginning with Shine Translate",
+    "explicitly approved non-production service retirement",
+    "dedicated Wellness persistence/deployment decision when approved"
+  ]
+}
