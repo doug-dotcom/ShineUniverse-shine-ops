@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generated_at": "2026-09-29T23:33:00+10:00",
   "rule": "A device result is valid only for the exact production commit and Railway deployment bound into the pack. A new production deployment invalidates an uncompleted or previously completed pack until it is explicitly re-bound and retested.",
   "status_values": [
@@ -140,7 +140,39 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "microphone grant/deny/recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "pass-phone flow",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "offline/flight-mode honesty",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "Home Screen lifecycle",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard/focus",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "saved phrases",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 2,
@@ -252,7 +284,34 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "log-a-dive primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "offline/reload behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "saved log persistence",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch/keyboard",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "Home Screen lifecycle",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 3,
@@ -364,7 +423,34 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "build-a-journey primary flow",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "saved-plan persistence",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "interrupted network recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch/keyboard",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "Home Screen lifecycle",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 4,
@@ -476,7 +562,34 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "programme/workout journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "timer interaction",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "attachment/file paths where used",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard/focus",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "resume/reopen",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 5,
@@ -590,6 +703,33 @@
       "blockers": [],
       "notes": [
         "Re-bound before human testing after live readiness monitor detected the Layer 173 production deployment."
+      ],
+      "focus_checks": [
+        {
+          "name": "core creator/listening journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "saved state",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "background/resume",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch/keyboard",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "network interruption",
+          "status": "untested",
+          "notes": []
+        }
       ]
     },
     {
@@ -702,7 +842,34 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "location/search/weather-marine journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "saved state",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "slow/offline behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch targets",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "resume/reopen",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 7,
@@ -814,7 +981,34 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "My Day primary journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "Foundation connect/disconnect UI",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "saved state",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "offline/network degradation",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "browser/Home Screen",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 8,
@@ -926,7 +1120,34 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "sign-in/session journey",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "primary money workflow",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save/reload",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "session expiry/recovery",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "keyboard/focus",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 9,
@@ -1038,7 +1259,34 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "race/decision workflow",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save/reload",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "session behaviour",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "stale/network failure honesty",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch/keyboard",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     },
     {
       "order": 10,
@@ -1150,7 +1398,35 @@
       ],
       "devices": [],
       "blockers": [],
-      "notes": []
+      "notes": [],
+      "focus_checks": [
+        {
+          "name": "sign-in/session",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "daily check-in/journal flow",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "save/reload",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "failed-write honesty",
+          "status": "untested",
+          "notes": []
+        },
+        {
+          "name": "touch/keyboard",
+          "status": "untested",
+          "notes": []
+        }
+      ]
     }
-  ]
+  ],
+  "evidence_rule": "A pass is valid only when every universal check and every app-specific focus check is explicitly passed on the bound release, with tester, timestamp, real-device evidence and no blockers."
 }
