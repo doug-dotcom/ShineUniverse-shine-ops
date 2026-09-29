@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-09-29T20:28:00+10:00",
+  "verified_at": "2026-09-29T21:58:30+10:00",
   "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
   "apps": [
     {
@@ -229,7 +229,7 @@
           "shine-daash-x-production.up.railway.app"
         ],
         "active_deployment": {
-          "id": "afed3b69-fc4c-4018-b441-f463f66bd106",
+          "id": "f0d00d4a-8169-48ef-b962-d6161eba4822",
           "status": "SUCCESS",
           "commit_sha": "c13d8ecf558d2d5d78c8d2c8e429f078f8819f95"
         }
