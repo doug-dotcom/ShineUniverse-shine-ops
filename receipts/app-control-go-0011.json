@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0011",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T19:45:30+10:00",
+  "changes": [
+    {
+      "app": "Project RC",
+      "type": "production-image-release-gate",
+      "pull_request": 102,
+      "merged_commit": "224c2e6cd931ae27964eb987fb7d0796ee5a041e",
+      "docker_gate": {
+        "shine_defence": "success",
+        "backend_tests_passed": 611,
+        "backend_subtests_passed": 47,
+        "exact_production_image_build": "success",
+        "frontend_ci": "success"
+      },
+      "discovery": {
+        "first_image_run": "failure",
+        "cause": ".env.example excluded by .dockerignore, exposing a packaging-vs-CI mismatch",
+        "corrected_before_merge": true
+      },
+      "post_merge": {
+        "project_rc_ci_run": 36550808976,
+        "project_rc_ci": "success",
+        "shine_defence_run": 36550808842,
+        "shine_defence": "success",
+        "railway_deployment_id": "bd8ee5d2-e2f3-4e3e-835c-6328c3201175",
+        "railway": "success",
+        "live_provenance": "exact-match"
+      }
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "registry-refresh",
+      "commit": "02887e9260b6d4c52e0aa8972d309e85a31c3986",
+      "ops_ci_run": 36551157936,
+      "ops_ci": "success",
+      "live_provenance_run": 36551157890,
+      "live_provenance": "success",
+      "live_artifact_id": 11024258003
+    }
+  ],
+  "fleet_live_result": {
+    "endpoints": 13,
+    "reachable": 13,
+    "exact_matches": 11,
+    "snapshot_drift": 2,
+    "severe_source_drift": 0,
+    "project_rc_exact_match": true
+  },
+  "next_queue": [
+    "continue release-gate convergence on remaining weak deployment paths",
+    "physical-device acceptance receipts",
+    "explicitly approved non-production retirement",
+    "Wellness onboarding"
+  ]
+}
