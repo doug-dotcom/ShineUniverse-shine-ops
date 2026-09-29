@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "request_id": "bootstrap",
+  "requested_by": "bootstrap",
+  "scope": "core",
+  "passes": 1,
+  "note": "Initial control request. Future Go commands replace this file."
+}
