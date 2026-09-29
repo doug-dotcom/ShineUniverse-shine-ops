@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0007",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T18:57:30+10:00",
+  "changes": [
+    {
+      "surface": "Shine Ops",
+      "type": "authoritative-production-registry",
+      "pull_request": 2,
+      "merged_commit": "911bccd756bcb903c45d89caefbccf797098d16a",
+      "path": "config/apps.json",
+      "registered_production_entries": 13,
+      "ci": "success"
+    },
+    {
+      "surface": "Shine app estate",
+      "type": "runtime-provenance-audit",
+      "result": "13-of-13-production-code-paths-support-shared-railway-runtime-provenance",
+      "headers": [
+        "X-Shine-Runtime-Provider",
+        "X-Shine-Runtime-Repository",
+        "X-Shine-Runtime-Commit",
+        "X-Shine-Runtime-Branch",
+        "X-Shine-Runtime-Deployment",
+        "X-Shine-Runtime-Service",
+        "X-Shine-Runtime-Environment"
+      ]
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "production-health-exclusions",
+      "result": "review-validation-and-legacy-surfaces-explicitly-separated",
+      "families": [
+        "shine-ski",
+        "shine-translate",
+        "shine-fish",
+        "shine-daash",
+        "project-l"
+      ]
+    }
+  ],
+  "next_queue": [
+    "physical-device acceptance receipts",
+    "non-destructive stale surface cleanup manifest",
+    "release gate convergence",
+    "optional live provenance observation",
+    "Wellness onboarding"
+  ]
+}
