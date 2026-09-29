@@ -74,5 +74,20 @@ test("special release scopes cannot be mistaken for full public apps", () => {
   assert.equal(ai.device_acceptance, "not-applicable");
 
   const wellness = registry.pending_apps.find((app) => app.id === "shine-wellness");
-  assert.equal(wellness.status, "awaiting-stable-product-head");
+  assert.ok(wellness);
+  assert.equal(wellness.status, "source-onboarded-ci-green-no-production");
+  assert.equal(wellness.repository, "doug-dotcom/Shine--wellness");
+  assert.equal(wellness.branch, "main");
+  assert.equal(wellness.product_head, "Build 13 — Wellness Trust Engine");
+  assert.match(wellness.commit_sha, SHA);
+  assert.equal(wellness.ci.status, "SUCCESS");
+  assert.equal(wellness.ci.test_files, 14);
+  assert.equal(wellness.ci.tests_passed, 73);
+  assert.equal(wellness.ci.typecheck, "SUCCESS");
+  assert.equal(wellness.ci.production_build, "SUCCESS");
+  assert.equal(wellness.production.status, "not-deployed");
+  assert.equal(wellness.production.railway_project, null);
+  assert.equal(wellness.production.deployment_id, null);
+  assert.equal(wellness.persistence.supabase_migrations, "ready-unapplied");
+  assert.equal(registry.apps.some((app) => app.id === "shine-wellness"), false);
 });
