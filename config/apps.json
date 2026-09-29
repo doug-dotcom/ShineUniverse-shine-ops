@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-09-29T18:50:00+10:00",
+  "verified_at": "2026-09-29T19:31:00+10:00",
   "purpose": "Authoritative production-source registry for the Shine app estate. This records deployed source and release-health coordinates separately from development-layer progress.",
   "apps": [
     {
@@ -172,7 +172,7 @@
           "shine-music-production.up.railway.app"
         ],
         "active_deployment": {
-          "id": "01cea2e5-677e-4a18-bdde-6aa0853ccffc",
+          "id": "98e7cfb3-d33d-42e2-9697-9f04ff5ae3de",
           "status": "SUCCESS",
           "commit_sha": "51b5ac7c7b69323195c9ec0294f78ffa8b517060"
         },
