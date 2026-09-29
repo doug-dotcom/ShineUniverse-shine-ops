@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { evaluateObservation, buildReport } from "../scripts/live-provenance.mjs";
+import { evaluateObservation, evaluateDevicePack, buildReport } from "../scripts/live-provenance.mjs";
 
 const app={
   id:"example",
@@ -72,4 +72,65 @@ test("report observes all registered apps and summarises drift",async()=>{
   assert.equal(report.severe_count,0);
   assert.equal(report.snapshot_drift_count,1);
   assert.equal(report.counts["snapshot-drift"],1);
+});
+
+
+const devicePack={
+  app_id:"example",
+  repository:"doug-dotcom/example",
+  branch:"main",
+  commit_sha:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  production_deployment_id:"deploy-1",
+  status:"untested"
+};
+
+test("device pack is ready only when live production exactly matches its bound release",()=>{
+  assert.deepEqual(
+    evaluateDevicePack(devicePack,{reachable:true,http_status:200,headers:goodHeaders}),
+    {status:"ready-for-human-test",reasons:[]}
+  );
+});
+
+test("device pack becomes stale when production advances on the correct source",()=>{
+  const result=evaluateDevicePack(devicePack,{
+    reachable:true,
+    http_status:200,
+    headers:{
+      ...goodHeaders,
+      "x-shine-runtime-commit":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "x-shine-runtime-deployment":"deploy-2"
+    }
+  });
+  assert.equal(result.status,"stale-release");
+  assert.deepEqual(result.reasons,["commit-changed","deployment-changed"]);
+});
+
+test("device pack is blocked when production provenance is unhealthy",()=>{
+  assert.equal(
+    evaluateDevicePack(devicePack,{reachable:false,error:"timeout",headers:{}}).status,
+    "blocked-runtime"
+  );
+  assert.equal(
+    evaluateDevicePack(devicePack,{
+      reachable:true,
+      http_status:200,
+      headers:{...goodHeaders,"x-shine-runtime-branch":"review"}
+    }).status,
+    "blocked-runtime"
+  );
+});
+
+test("report summarises physical-device pack readiness independently from registry drift",async()=>{
+  const registry={verified_at:"2026-09-29T00:00:00Z",apps:[app]};
+  const response={status:200,headers:{get:name=>goodHeaders[name]??null}};
+  const report=await buildReport(registry,{
+    fetchImpl:async()=>response,
+    timeoutMs:100,
+    devicePacks:{generated_at:"2026-09-29T00:00:00Z",packs:[devicePack]}
+  });
+  assert.equal(report.schema_version,2);
+  assert.equal(report.device_pack_ready_count,1);
+  assert.equal(report.device_pack_stale_count,0);
+  assert.equal(report.device_pack_blocked_count,0);
+  assert.equal(report.results[0].device_pack.status,"ready-for-human-test");
 });
