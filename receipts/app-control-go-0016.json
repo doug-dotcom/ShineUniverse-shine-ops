@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0016",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T22:31:30+10:00",
+  "changes": [
+    {
+      "surface": "Shine Ops",
+      "type": "release-gate-convergence-matrix",
+      "pull_request": 5,
+      "merged_commit": "e4580011f803f7e7c1ee5a8a16c82b6eb3d3199f",
+      "path": "config/release-gates.json",
+      "app_level_converged": 10,
+      "capability_only_converged": 1,
+      "core_managed": 2,
+      "open_app_level_gaps": 0,
+      "pr_ci_run": 36568507747,
+      "pr_ci": "success",
+      "main_ci_run": 36568557632,
+      "main_ci": "success"
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "physical-device-acceptance-queue",
+      "path": "config/device-acceptance-queue.json",
+      "queued_user_surfaces": 10,
+      "status": "all-untested"
+    },
+    {
+      "app": "Shine D&D",
+      "type": "product-head-refresh",
+      "previous_layer": 89,
+      "current_layer": 93,
+      "qualifier": "implemented-and-tested-locally",
+      "full_app_live": false,
+      "deployed_scope": "capability-only",
+      "registry_commit": "a973de22c6e5d7a639b4d6d21a18184154e2b0ee"
+    }
+  ],
+  "verification": {
+    "ops_ci_run": 36568621848,
+    "ops_ci": "success",
+    "live_provenance_run": 36568621603,
+    "live_provenance": "success"
+  },
+  "next_queue": [
+    "human physical-device acceptance receipts",
+    "explicitly approved non-production service retirement",
+    "Wellness onboarding when stable",
+    "continue core-managed Project L / Shine AI work in the separate core formation"
+  ]
+}
