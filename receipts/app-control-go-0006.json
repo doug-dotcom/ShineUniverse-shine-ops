@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "request_id": "app-control-go-0006",
+  "mode": "app-control",
+  "scope": "shine-app-estate",
+  "status": "success",
+  "completed_at": "2026-09-29T08:42:30Z",
+  "changes": [
+    {
+      "app": "Shine DaAsh",
+      "type": "general-product-ci",
+      "pull_request": 21,
+      "merged_commit": "c13d8ecf558d2d5d78c8d2c8e429f078f8819f95",
+      "evidence": {
+        "regression_suites_passed": 103,
+        "production_build": "success",
+        "github_ci": "success",
+        "shine_defence_release_head": "success",
+        "railway_production": "success",
+        "railway_deployment_id": "afed3b69-fc4c-4018-b441-f463f66bd106"
+      }
+    },
+    {
+      "app": "Project RC",
+      "type": "control-register-correction",
+      "production_commit": "84552c127bf2a8eca2c2fd3fb5453c0db91a64e2",
+      "evidence": {
+        "project_rc_ci": "success",
+        "shine_defence_release_head": "success",
+        "railway_production": "success",
+        "railway_deployment_id": "13a9de27-4c9c-4e2a-936c-a69668fcf75d"
+      }
+    },
+    {
+      "surface": "Shine Ops",
+      "type": "device-acceptance-template",
+      "path": "receipts/device-acceptance-template.json",
+      "commit": "16db592e6eec28bf8936fffb672329a9152d2c70"
+    }
+  ],
+  "next_queue": [
+    "consumer physical-device acceptance receipts",
+    "production source registry completion",
+    "runtime provenance convergence",
+    "release gate convergence",
+    "stale review surface cleanup",
+    "Wellness onboarding"
+  ]
+}
