@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "config/apps.json"
+      - "config/device-acceptance-packs.json"
       - "scripts/live-provenance.mjs"
       - "test/live-provenance.test.mjs"
       - ".github/workflows/live-provenance.yml"
@@ -46,9 +47,10 @@ jobs:
             process.exit(0);
           }
           const r=JSON.parse(fs.readFileSync(p,'utf8'));
-          const rows=r.results.map(x=>`| ${x.name} | ${x.evaluation.status} | ${x.headers['x-shine-runtime-branch']??'—'} | ${(x.headers['x-shine-runtime-commit']??'—').slice(0,12)} |`).join('\n');
+          const rows=r.results.map(x=>`| ${x.name} | ${x.evaluation.status} | ${x.device_pack?.status??'not-applicable'} | ${x.headers['x-shine-runtime-branch']??'—'} | ${(x.headers['x-shine-runtime-commit']??'—').slice(0,12)} |`).join('\n');
+          console.log(`Device packs: ready=${r.device_pack_ready_count} stale=${r.device_pack_stale_count} blocked=${r.device_pack_blocked_count}`);
           fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
-            `## Live production provenance\n\nSevere: **${r.severe_count}** · Snapshot drift: **${r.snapshot_drift_count}**\n\n| App | State | Live branch | Live commit |\n|---|---|---|---|\n${rows}\n`
+            `## Live production provenance\n\nSevere: **${r.severe_count}** · Snapshot drift: **${r.snapshot_drift_count}** · Device packs ready: **${r.device_pack_ready_count}** · stale: **${r.device_pack_stale_count}** · blocked: **${r.device_pack_blocked_count}**\n\n| App | Runtime state | Device pack | Live branch | Live commit |\n|---|---|---|---|---|\n${rows}\n`
           );
           NODE
 
