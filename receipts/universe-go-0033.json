@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0033",
+  "mode": "chat-control",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "focus": "safe-resume-semantics",
+  "dispatch_commits": {
+    "L + Me": "e6d3833631b6fcc939ce8629a11f6243b502a4a5",
+    "Shine AI": "21b7b00ad8d62148f9ca3a4aa35f57f04adcb5b3",
+    "Foundation + Concierge + Defence": "ce98a61e3482c3cad5231901b78a46d3150c10ac"
+  },
+  "certified_heads": {
+    "L + Me": "fe5cd3f62d4d662b3b725d75f7dc95c8a604c754",
+    "Shine AI": "3e5c62cc75782c694e1c2ed417ac108e272e3f57",
+    "Foundation + Concierge + Defence": "69fdef90ccd5b6898b273c819d1a0ffb5ee1918e"
+  },
+  "required_runs": [
+    {"surface":"L + Me","run_id":36679564775,"run_number":875,"conclusion":"success"},
+    {"surface":"Shine AI","run_id":36679540495,"run_number":965,"conclusion":"success"},
+    {"surface":"Foundation + Concierge","run_id":36679542220,"run_number":1029,"conclusion":"success"},
+    {"surface":"Defence","run_id":36679542050,"run_number":1045,"conclusion":"success"}
+  ],
+  "recovery_evidence": {
+    "failed_candidate_run_id": 36679269979,
+    "failed_candidate_conclusion": "failure",
+    "failure_class": "test-collection-wiring",
+    "failed_import": "memory.supabase_sync",
+    "repair_commit": "136c8e0b9b03a227455b6e4f2a2b683347071f9a",
+    "final_cleanup_commit": "fe5cd3f62d4d662b3b725d75f7dc95c8a604c754",
+    "resume_safe_only_after_current_head_success": true
+  }
+}
