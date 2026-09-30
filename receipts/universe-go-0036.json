@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0036",
+  "parent_request_id": "universe-go-0035",
+  "parent_receipt": "receipts/universe-go-0035.json",
+  "mode": "chat-control",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "focus": "checkpoint-lineage",
+  "dispatch_commits": {
+    "L + Me": "ca994acc060c572b2a3312edd6a4bbf110be52f9",
+    "Shine AI": "3ac0437426d2c5d4721a9ddbe597f966ec53af0d",
+    "Foundation + Concierge + Defence": "5aedd89f2b44229ff92d5f8d519eaccc226342f6"
+  },
+  "parent_certified_heads": {
+    "L + Me": "971efdcfcd084cb03e4b83bbc323ee2a1d5c1003",
+    "Shine AI": "e458b851b9775beaae91857b4cf2746315ec8963",
+    "Foundation + Concierge + Defence": "ba71065a15af803255a92e2cb47e637696cb314c"
+  },
+  "certified_heads": {
+    "L + Me": "1eea0a883757830c299a8a559251fc8db94dc108",
+    "Shine AI": "f0ed9f1abb4683296c66436cb970179fb67b5cea",
+    "Foundation + Concierge + Defence": "01d31370c5d545450ccdc90a6de37d4534418ca1"
+  },
+  "lineage_comparisons": [
+    {"surface":"L + Me","status":"ahead","aheadBy":16,"behindBy":0},
+    {"surface":"Shine AI","status":"ahead","aheadBy":16,"behindBy":0},
+    {"surface":"Foundation + Concierge + Defence","status":"ahead","aheadBy":8,"behindBy":0}
+  ],
+  "required_runs": [
+    {"surface":"L + Me","run_id":36690439495,"run_number":907,"conclusion":"success"},
+    {"surface":"L Defence","run_id":36690440237,"run_number":164,"conclusion":"success"},
+    {"surface":"Shine AI","run_id":36690774346,"run_number":998,"conclusion":"success"},
+    {"surface":"Shine AI Defence","run_id":36690775511,"run_number":356,"conclusion":"success"},
+    {"surface":"Shine AI lineage audit","run_id":36690774373,"run_number":19,"conclusion":"success"},
+    {"surface":"Foundation + Concierge","run_id":36690675293,"run_number":1057,"conclusion":"success"},
+    {"surface":"Defence","run_id":36690675251,"run_number":1073,"conclusion":"success"}
+  ],
+  "production_evidence": {
+    "shine_ai_commit": "f0ed9f1abb4683296c66436cb970179fb67b5cea",
+    "railway_deployment_id": "7a568e0f-9a83-4a51-a346-ccaae2db9b61",
+    "railway_status": "SUCCESS",
+    "promotion_run_id": 36690831203,
+    "promotion_conclusion": "success",
+    "duplicate_promotion_run_id": 36690887654,
+    "duplicate_promotion_conclusion": "skipped",
+    "exact_sha_runtime_verified": true,
+    "historical_proven_release_ledger_verified": true,
+    "immutable_proven_release_recorded": true
+  },
+  "lineage_evidence": {
+    "all_final_heads_descend_from_parent_checkpoint": true,
+    "all_final_heads_behind_parent_by": 0,
+    "superseded_intermediate_heads_non_authoritative": true,
+    "failed_intermediate_proofs_preserved_as_history": true,
+    "competing_duplicate_promotion_created_branch": false,
+    "resume_checkpoint_state": "ready"
+  }
+}
