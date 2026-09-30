@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0035",
+  "mode": "chat-control",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "focus": "journey-checkpoint-integrity",
+  "dispatch_commits": {
+    "L + Me": "e0f4d1d0dbca84201a6dd10390b145fd03c969cf",
+    "Shine AI": "a3ade61cd35bcd28aa934d79f3e546cfcba37d18",
+    "Foundation + Concierge + Defence": "d255f5fbf8dbbf798a1ac588b5f188b33a15bb2a"
+  },
+  "certified_heads": {
+    "L + Me": "971efdcfcd084cb03e4b83bbc323ee2a1d5c1003",
+    "Shine AI": "e458b851b9775beaae91857b4cf2746315ec8963",
+    "Foundation + Concierge + Defence": "ba71065a15af803255a92e2cb47e637696cb314c"
+  },
+  "required_runs": [
+    {"surface":"L + Me","run_id":36686935766,"run_number":891,"conclusion":"success"},
+    {"surface":"Shine AI","run_id":36687116195,"run_number":980,"conclusion":"success"},
+    {"surface":"Foundation + Concierge","run_id":36687065738,"run_number":1046,"conclusion":"success"},
+    {"surface":"Defence","run_id":36687065760,"run_number":1062,"conclusion":"success"}
+  ],
+  "production_evidence": {
+    "shine_ai_commit": "e458b851b9775beaae91857b4cf2746315ec8963",
+    "railway_deployment_id": "a9ee6fd4-6fc4-4516-86f7-2aab7ce4e056",
+    "railway_status": "SUCCESS",
+    "defence_run_id": 36687117098,
+    "audit_run_id": 36687116443,
+    "promotion_run_id": 36687167795,
+    "exact_sha_runtime_verified": true,
+    "immutable_proven_release_recorded": true,
+    "proven_production_advanced": true
+  },
+  "checkpoint_evidence": {
+    "dispatch_only_ai_deployment_skipped": true,
+    "superseded_intermediate_heads_ignored": true,
+    "completed_work_reused_without_false_replay": true,
+    "current_heads_equal_certified_heads": true,
+    "resume_checkpoint_state": "ready"
+  }
+}
