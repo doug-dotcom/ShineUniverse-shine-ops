@@ -4,5 +4,16 @@
   "mode": "chat-control",
   "scope": "core",
   "pass": 1,
-  "status": "success"
+  "status": "success",
+  "dispatch_commits": {
+    "L + Me": "7508dcd0709195b0a44f339c54c4fa397b0f35d2",
+    "Shine AI": "51fcd36ee12d3de9e7b2d1441b53f39b52f43961",
+    "Foundation + Concierge + Defence": "0f7a24472647b9bb66c8a9601e0baf29b88ab43b"
+  },
+  "required_runs": [
+    {"surface":"L + Me","run_id":36675806761,"conclusion":"success"},
+    {"surface":"Shine AI","run_id":36675809444,"conclusion":"success"},
+    {"surface":"Foundation + Concierge","run_id":36675790567,"conclusion":"success"},
+    {"surface":"Defence","run_id":36675790517,"conclusion":"success"}
+  ]
 }
