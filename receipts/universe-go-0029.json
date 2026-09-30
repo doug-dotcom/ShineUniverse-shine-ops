@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "request_id": "universe-go-0029",
+  "mode": "chat-control",
+  "scope": "core",
+  "pass": 1,
+  "status": "success",
+  "focus": "recovery-convergence",
+  "dispatch_commits": {
+    "L + Me": "ce695de4df72ff214ff57fe38f093034e6925e6e",
+    "Shine AI": "782caff3fc5002043ba14d3a6278cae2d2cb5251",
+    "Foundation + Concierge + Defence": "d30da661e069b91416813d0d955b722ccf7fa0eb"
+  },
+  "certified_heads": {
+    "L + Me": "6a8d1fe0bf1884786afa3c7fc76c90b0079cdaa2",
+    "Shine AI": "2de80ff2a47df3f008a22e05b673c59b0fd6b4f9",
+    "Foundation + Concierge + Defence": "1bfdaea105d75973f0e07a31cdccbf39d4a0cc66"
+  },
+  "required_runs": [
+    {"surface":"L + Me","run_id":36666772036,"run_number":849,"conclusion":"success"},
+    {"surface":"Shine AI","run_id":36666889180,"run_number":953,"conclusion":"success"},
+    {"surface":"Foundation + Concierge","run_id":36666949891,"run_number":990,"conclusion":"success"},
+    {"surface":"Defence","run_id":36666949849,"run_number":1006,"conclusion":"success"}
+  ],
+  "recovery_evidence": {
+    "L + Me": {
+      "initial_run_id": 36666538963,
+      "initial_conclusion": "cancelled",
+      "cause": "superseded by newer Project L commits under cancel-in-progress concurrency",
+      "final_head_run_id": 36666772036,
+      "final_conclusion": "success"
+    },
+    "Foundation + Concierge": {
+      "intermediate_head": "2266bec5932b7d62696f24af6410d7600df24fc2",
+      "intermediate_run_id": 36666868525,
+      "intermediate_conclusion": "failure",
+      "cause": "promoted-release consumer boundary rejected an unreviewed raw-binding consumer",
+      "recovery_head": "1bfdaea105d75973f0e07a31cdccbf39d4a0cc66",
+      "recovery_run_id": 36666949891,
+      "recovery_conclusion": "success"
+    }
+  }
+}
